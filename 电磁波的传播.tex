@@ -1,0 +1,256 @@
+\include{header}
+
+\begin{document}
+ \begin{center} 
+ \Large \textbf{电磁波的传播}
+\end{center}
+ 
+\large 
+\begin{center}
+ \textbf{1.无界空间中的平面电磁波}
+\end{center}
+
+[\textbf{自由空间中的麦克斯韦方程组}] $\begin{cases}\vec\nabla\times\vec E=-\frac{\partial \vec B}{\partial t}\\ \vec\nabla\times\vec H=\frac{\partial\vec D}{\partial t}\\ \vec\nabla\cdot\vec E=0\\\vec\nabla\cdot\vec B=0 \end{cases}$.\par
+
+[\textbf{真空中的光速}] $c=\frac{1}{\sqrt{\mu_0\varepsilon_0}}$.\par
+
+[\textbf{电场波动方程}] $\vec\nabla^2\vec E-\frac{1}{c^2}\frac{\partial^2\vec D}{\partial t^2}=\vec 0$.\par
+
+[\textbf{磁场波动方程}] $\vec\nabla^2\vec B-\frac{1}{c^2}\frac{\partial^2\vec B}{\partial t^2}=\vec 0$.\par
+
+[\textbf{线性介质中电磁场与频率关系}] $\begin{cases}\vec D(\omega)=\varepsilon (\omega)\vec E(\omega)\\\vec B(\omega)=\mu (\omega)\vec H(\omega)\end{cases}$.\par
+
+[\textbf{介质的色散}] $\varepsilon$和$\mu$随频率而变的现象.\par
+
+[\textbf{时谐电磁波(单色波)}] 以一定频率作正弦振荡的电磁波.\par
+\qquad $\begin{cases}\vec E(\vec x,t)=\vec E(\vec x)e^{-i\omega t}\\\vec B(\vec x,t)=\vec B(\vec x)e^{-i\omega t}\end{cases}$.\par
+
+[\textbf{时协情形下自由空间的麦克斯韦方程组}] $\begin{cases}\vec\nabla\times\vec E=i\omega\mu\vec H\\\vec\nabla\times\vec H=-i\omega\varepsilon\vec E\\\vec\nabla\cdot\vec E=0\\\vec\nabla\cdot\vec H=0\end{cases}$, 只有两个旋度方程独立.\par
+
+[\textbf{波矢量}] $|\vec k|=\omega\sqrt{\mu\varepsilon}$.\par
+
+[\textbf{亥姆霍兹方程}] $\begin{cases}\vec\nabla^2\vec E+k^2\vec E=\vec 0\quad (\vec\nabla\cdot\vec E=0)\\\vec\nabla^2\vec B+k^2\vec B=\vec 0\quad(\vec\nabla\cdot\vec B=0)\end{cases}$.\par
+
+[\textbf{电磁波中电磁场的关系}] $\begin{cases}\vec B=-\frac{i}{\omega}\vec\nabla\times\vec E=-\frac{i}{k}\sqrt{\mu\varepsilon}\vec\nabla\times\vec E\\\vec E=\frac{i}{\omega\mu\varepsilon}\vec\nabla\times\vec B=\frac{i}{k\sqrt{\mu\varepsilon}}\vec\nabla\times\vec B\end{cases}$.\par
+
+[\textbf{平面电磁波}] 电磁波沿$x$轴方向传播, 其场强在与$x$轴正交的平面上各点具有相同值. 即$\vec E$与$\vec B$仅与$x$和$t$有关, 与$y$和$z$无关.\par
+
+\clearpage
+
+[\textbf{平面电磁波的方程}] $\frac{d^2}{dx^2}\vec E(\vec x)+k^2\vec E(\vec x)=\vec0$, 解为$\vec E(\vec x)=\vec E_0e^{ikx}$.\par
+
+[\textbf{平面电磁波解的时谐情况}] $\vec E(\vec x)=\vec E_0e^{i(kx-\omega t)}$.\par
+\qquad 电场振幅: $\vec E_0$;\par
+\qquad 波动相位因子: $e^{i(kx-\omega t)}$;\par
+\qquad 注意: 实际电场只取实部: $\vec E(\vec x)=\vec E_0\cos{(kx-\omega t)}$.\par
+
+[\textbf{平面电磁波电场无传播方向分量}] $\vec\nabla\cdot\vec E=0\Rightarrow E_x=0$.\par
+
+[\textbf{相位因子的意义}]\par
+\qquad (1). $t=0$时, $x=0$平面处于波峰;\par
+\qquad (2). $t$时刻, 波峰移动至$kx-\omega t=0$处, 即$x=\frac{\omega}{k}t$平面;\par
+\qquad (3). 平面电磁波相速度为$v=\frac{\omega}{k}$;\par
+\qquad\qquad i. 线性均匀绝缘介质内平面电磁波相速度为$v=\frac{1}{\sqrt{\mu\varepsilon}}$;\par
+\qquad\qquad ii. 真空中平面电磁波相速度为$c=\frac{1}{\sqrt{\mu_0\varepsilon_0}}$;\par
+\qquad\qquad iii. 线性均匀绝缘介质中单色平面电磁波相速度为$v=\frac{1}{\sqrt{\mu_0\varepsilon_0}\sqrt{\mu_r\varepsilon_r}}=\frac{c}{\sqrt{\mu_r\varepsilon_r}}=\frac{c}{n}$, ($n$为折射率).\par
+
+[\textbf{真空中波矢的性质(波数)}] $|\vec k|=\omega\sqrt{\mu_0\varepsilon_0}=\frac{2\pi f}{c}=\frac{2\pi}{\lambda}$
+
+[\textbf{一般坐标系下平面电磁波解的表达式}] $\vec E(\vec x, t)=\vec E_0e^{i(\vec k\cdot\vec x-\omega t)}$.\par
+
+[\textbf{电磁波的偏振方向}] $\vec E$的取向.\par
+
+[\textbf{平面电磁波的性质}]\par
+\qquad (1). 平面电磁波是横波, $\vec\nabla\cdot\vec E=0\Rightarrow \vec k\cdot\vec E=0$;\par
+\qquad (2). $\vec E$与$\vec B$相互垂直, $\vec B=\sqrt{\mu\varepsilon}\vec e_k\times\vec E\Rightarrow \hat{\vec E}\times\hat{\vec B}=\hat{\vec{e_k}}$;\par
+\qquad (3). $\vec E$与$\vec B$同相, $\left|\frac{\vec E}{\vec B}\right|=\frac{1}{\sqrt{\mu\varepsilon}}=v$(真空中$\left|\frac{\vec E}{\vec B}\right|=c$).\par
+
+[\textbf{线性均匀介质中平面电磁波的能量密度}] $w=\varepsilon E^2=\frac{1}{\mu}B^2=\varepsilon E_0^2\cos{^2(\vec k\cdot\vec x-\omega t)}=\frac{1}{\mu}B_0^2\cos{^2(\vec k\cdot\vec x-\omega t)}$.\par
+
+[\textbf{线性均匀介质中平面电磁波的能流密度(坡印亭矢量)}] $\vec S=\vec E\times\vec H=\sqrt{\frac{\varepsilon}{\mu}}E^2\frac{\vec k}{k}=vw\vec e_k$.\par
+
+[\textbf{二次周期式的平均值}] 当$f(t)=f_0e^{-i\omega t}$, $g(t)=g_0e^{-i\omega t+i\phi}$时, 平均值\\$\bar{fg}=\frac{\omega}{2\pi}\int_0^{\frac{2\pi}{\omega}}f_0g_0\cos{\omega t}\cdot\cos{(\omega t-\phi)}dt=\frac{1}{2}f_0g_0\cos\phi=\frac{1}{2}Re(f^*g)$.\par
+
+[\textbf{平面电磁波在线性均匀绝缘介质中平均能量与能流密度}] $\begin{cases}\bar w=\frac{1}{2}\varepsilon E_0^2=\frac{1}{2\mu}B_0^2\\ \bar{\vec S}=\sqrt{\frac{\varepsilon}{\mu}}\bar{E_0^2}\vec e_k=\frac{1}{2}\sqrt{\frac{\varepsilon}{\mu}}E_0^2\vec e_k\end{cases}$.\par
+
+\clearpage
+
+\large 
+\begin{center}
+ \textbf{2.边界上电磁波的传播}
+\end{center}
+
+[\textbf{介质面上的波矢}] $\vec k\cdot\vec x=\vec k'\cdot\vec x=\vec k''\cdot\vec x$.\par
+\qquad 当$z=0$平面为界面时, $\begin{cases}k_x=k_x'=k_x''\\ k_y=k_y'=k_y''\end{cases}\Rightarrow \begin{cases}k\sin\theta=k'\sin{\theta'}=k''\sin{\theta''}\\ k\cos{\theta}=k'\cos{\theta'}=k''\cos{\theta''}\end{cases}$.\par
+
+[\textbf{反射定律}] $\frac{\sin{\theta}}{\sin{\theta '}}=1\Rightarrow \theta'=\theta$.\par
+
+[\textbf{折射定律}] $\frac{\sin\theta}{\sin\theta''}=\frac{k''}{k}=\frac{\sqrt{\mu_2\varepsilon_2}}{\sqrt{\mu_1\varepsilon_1}}=n_{21}$.\par
+
+[\textbf{折射率}] $n_{21}$表示介质$2$相对介质$1$的折射率. 除铁磁介质外, 一般有$\mu\approx \mu_0$, 因此通常$n_{21}=\sqrt\frac{\varepsilon_2}{\varepsilon_1}$.\par
+
+[\textbf{$\vec E$垂直于入射面(平行于界面)的菲涅尔公式}]\par
+\qquad 反射: $\frac{E'}{E}=\frac{\sqrt{\mu_2\varepsilon_1}\cos\theta-\sqrt{\mu_1\varepsilon_2}\cos\theta''}{\sqrt{\mu_2\varepsilon_1}\cos\theta+\sqrt{\mu_1\varepsilon_2}\cos\theta''}$\par
+\qquad \qquad 非铁磁近似($\mu\approx \mu_0$): $\frac{E'}{E}\approx -\frac{\sin{(\theta-\theta'')}}{\sin{(\theta+\theta'')}}$;\par
+\qquad 折射: $\frac{E''}{E}=\frac{2\sqrt{\mu_2\varepsilon_1}\cos\theta}{\sqrt{\mu_2\varepsilon_1}\cos\theta+\sqrt{\mu_1\varepsilon_2}\cos\theta''}$\par
+\qquad \qquad 非铁磁近似($\mu\approx \mu_0$): $\frac{E''}{E}\approx \frac{2\cos\theta\sin\theta''}{\sin{(\theta+\theta'')}}$.\par
+
+[\textbf{$\vec E$平行于入射面的菲涅耳公式}]\par
+\qquad 反射: $\frac{E'}{E}=\frac{\sqrt{\mu_1\varepsilon_2}\cos\theta-\sqrt{\mu_2\varepsilon_1}\cos\theta''}{\sqrt{\mu_1\varepsilon_2}\cos\theta+\sqrt{\mu_2\varepsilon_1}\cos\theta''}$\par
+\qquad \qquad 非铁磁近似($\mu\approx \mu_0$): $\frac{E'}{E}\approx \frac{\tan{(\theta-\theta'')}}{\tan{(\theta+\theta'')}}$;\par
+\qquad 折射: $\frac{E''}{E}=\frac{2\sqrt{\mu_2\varepsilon_1}\cos\theta}{\sqrt{\mu_1\varepsilon_2}\cos\theta+\sqrt{\mu_2\varepsilon_1}\cos\theta''}$\par
+\qquad \qquad 非铁磁近似($\mu\approx \mu_0$): $\frac{E''}{E}\approx \frac{2\cos\theta\sin\theta''}{\sin{(\theta+\theta'')}\cos{(\theta-\theta'')}}$.\par
+
+[\textbf{自然光经折射或反射后会变味部分偏振光(两个偏振分量强度不同)}].\par
+
+[\textbf{布儒斯特定律}] 在$\theta+\theta''=\frac{\pi}{2}$时, $\vec E$平行于入射面的分量没有反射波, 反射光变为垂直于入射面偏振的完全偏振光.\par
+
+[\textbf{布儒斯特角}] $\theta=\frac{\pi}{2}-\theta''$.\par
+
+[\textbf{半波损失}] 在$\vec E$垂直于入射面时, 若$\theta>\theta''$(即$\varepsilon_2>\varepsilon_1$), 则$\frac{E'}{E}<0$(即反射波电场与入射波电场反相).\par
+
+[\textbf{全反射条件}]\par
+\qquad (1). $\varepsilon_1>\varepsilon_2, (n_{21}<1)$;\par
+\qquad (2). $\sin\theta>n_{21}$.\par
+
+\clearpage
+
+[\textbf{全反射情形下亥姆霍兹方程的解}]\par
+\qquad 全反射时: $\sin\theta''=1$\par
+\qquad 由$k_x''=k_x$得$k_x''=k\sin\theta$, 临界时$k_x''=kn_{21}$\par
+\qquad 当$\theta$超过临界角时, $k_x''>kn_{21}$\par
+\qquad 因$k_y''=0$, 故$k_z''$非零.\par
+\qquad 由$k''^2=k_x''^2+k_y''^2+k_z''^2$得$k_z''=\sqrt{k''^2-k_x''^2}$\par
+\qquad 因$k_x''>k''$,有$k_z''=i\sqrt{k_x''^2-k''^2}=ik\sqrt{\left(\frac{k_x''}{k}\right)^2-\left(\frac{k''}{k}\right)^2}$\par
+\qquad 由$k_x''=k\sin\theta$, $\frac{k''}{k}=\frac{\sqrt{\mu_2\varepsilon_2}}{\mu_1\varepsilon_1}=n_{21}$, 得$k_z''=ik\sqrt{\sin^2\theta-n_{21}^2}$\par
+\qquad 令$k_z''=i\kappa$, $\kappa=k\sqrt{\sin^2\theta-n_{21}^2}$, 有$\vec E''=\vec E_0''e^{i(k_x''x+i\kappa z-\omega t)}=\vec E_0''e^{-\kappa z}e^{i(k_x''x-\omega t)}$\par
+\qquad $\vec E''$沿$x$轴方向传播, 沿$z$轴指数衰减.\par
+\qquad \qquad 设当$\vec E''$沿$z$衰减到$e^{-1}$时的深度为截止深度: $z_c=\kappa^{-1}=\frac{1}{k\sqrt{\sin^2\theta-n_{21}^2}}=\frac{\lambda_1}{2\pi\sqrt{\sin^2\theta-n_{21}^2}}$\par
+
+[\textbf{全反射情形下$\vec E''$垂直于入射面(平行于界面)时的$\vec H''$}]\par
+\qquad 此时$E''=E_y''$, 由$\vec H''=\frac{1}{\mu_2}$得:\par
+\qquad \qquad $H_z''=\sqrt{\frac{\varepsilon_2}{\mu_2}}\frac{k_x''}{k''}E_y''=\sqrt\frac{\varepsilon_2}{\mu_2}\frac{\sin\theta}{n_{21}}E''$\par
+\qquad \qquad $H_x''=-\sqrt{\frac{\varepsilon_2}{\mu_2}}\frac{k_z''}{k''}E_y''=-i\sqrt{\frac{\varepsilon_2}{\mu_2}}\sqrt{\left(\frac{\sin\theta}{n_{21}}\right)^2-1}E''$\par
+\qquad (1). $H_z''$与$E''$同相;\par
+\qquad (2). $H_x''$与$E''$有$\frac{\pi}{2}$相位差.\par
+
+[\textbf{全反射情形下折射波的平均能流密度}]\par
+\qquad (1). $\bar{S_x''}=\frac{1}{2}Re(E_y''^*H_z'')=\frac{1}{2}\sqrt{\frac{\varepsilon_2}{\mu_2}}\frac{\sin\theta}{n_{21}}|E_0''|^2e^{-2\kappa z}$;\par
+\qquad (2). $\bar{S_z''}=\frac{1}{2}Re(E_y''^*H_x'')=0$.\par
+
+[\textbf{全反射情形下的菲涅耳公式(非铁磁近似)变换}]\par
+\qquad $\begin{cases}\sin\theta''\rightarrow \frac{k_x''}{k''}=\frac{\sin\theta}{n_{21}}\\\cos\theta''\rightarrow\frac{k_z''}{k''}=i\sqrt{\frac{\sin^2\theta}{n_{21}^2}-1}\end{cases}$\par
+\qquad\qquad 当$\vec E$垂直于入射面时: $\begin{cases}\frac{E'}{E}=\frac{\cos\theta-i\sqrt{\sin^2\theta-n_{21}^2}}{\cos\theta+i\sqrt{\sin^2\theta-n_{21}^2}}=e^{-2i\phi}\\\tan\phi=\frac{\sqrt{\sin^2\theta-n_{21}^2}}{\cos\theta}\end{cases}$.
+
+\clearpage
+
+[\textbf{全反射下菲涅耳公式中相移产生的原因}] $S_z''$的平均值为零但瞬时值不为零, 电磁能量在界面附近的薄层内储存起来, 在另一半周期内释放为反射波能量.\par
+
+\large 
+\begin{center}
+ \textbf{3.有导体存在时电磁波的传播}
+\end{center}
+
+[\textbf{良导体}] 导体内部没有净自由电荷积累, 电荷只分布于导体表面上.\par
+
+[\textbf{良导体条件}] $\frac{\sigma}{\omega\varepsilon}>>1$.\par
+\qquad 由$\vec\nabla\cdot\vec D=\rho$得$\vec\nabla\cdot\vec E=\frac{\rho}{\varepsilon}$\par
+\qquad 导体中由欧姆定律$\vec J=\sigma\vec E$得$\vec\nabla\cdot\vec J=\sigma\vec\nabla\cdot\vec E=\frac{\sigma\rho}{\varepsilon}$\par
+\qquad 由电流连续性$\vec\nabla\cdot\vec J+\frac{\partial\rho}{\partial t}=0$得$\frac{\partial\rho}{\partial t}=-\frac{\sigma\rho}{\varepsilon}$, 解得$\rho(t)=\rho_0e^{-\frac{\sigma}{\varepsilon}t}$\par
+\qquad 当到达弛豫时间(特征时间)$\tau$时, $\rho=\rho_0e^{-1}$, 得$\tau=\frac{\varepsilon}{\sigma}$\par
+\qquad 当$\omega<<\frac{1}{\tau}$(即$\omega<<\frac{\sigma}{\varepsilon}$)时, $\rho\rightarrow 0$, 即认为导体为良导体\par
+\qquad 良导体条件为$\omega<<\frac{\sigma}{\varepsilon}$或$\frac{\sigma}{\omega\varepsilon}>>1$.\par
+
+[\textbf{良导体内的麦克斯韦方程组}] $\begin{cases}\vec\nabla\times\vec E=-\frac{\partial\vec B}{\partial t}\\\vec\nabla\times\vec H=\vec J+\frac{\partial \vec D}{\partial t}\\\vec\nabla\cdot\vec D=0\\\vec\nabla\cdot\vec H=0 \end{cases}$
+
+[\textbf{良导体内时谐情形下的麦克斯韦方程组}] $\begin{cases}\vec\nabla\times\vec E=i\omega\mu\vec H\\\vec\nabla\times\vec H=\sigma\vec E-i\omega\varepsilon\vec E\\\vec\nabla\cdot\vec D=0\\\vec\nabla\cdot\vec H=0 \end{cases}$
+
+[\textbf{复电容率}] $\varepsilon'=\varepsilon+i\frac{\sigma}{\omega}$, 使$\vec\nabla\times\vec H=-i\omega\varepsilon'\vec E$.\par
+
+[\textbf{复电容率的物理意义}]\par
+\qquad 在$\vec\nabla\times\vec H=\sigma\vec E-i\omega\varepsilon\vec E$中, 传导电流$\sigma\vec E$与$\vec E$同相, 耗散功率密度为$\frac{1}{2}Re(\vec J^*\cdot\vec E)=\frac{1}{2}\sigma E_0^2$. 位移电流$-i\omega\varepsilon\vec E$与电场正交(存在$\frac{\pi}{2}$相位差), 不消耗功率;\par
+\qquad 在复电容率$\varepsilon'$中, 实部$\varepsilon$代表位移电流贡献, 在$\vec\nabla\times\vec H=-i\omega\varepsilon'\vec E$中无功率耗散. 虚部$\frac{\sigma}{\omega}$是传导电流贡献, 有功率耗散.\par
+
+[\textbf{导体内亥姆霍兹方程及解}]\par
+\qquad $\begin{cases}\vec\nabla^2\vec E+k^2\vec E=\vec 0\\k=\omega\sqrt{\mu\varepsilon'}\\\vec\nabla\cdot\vec E=0\end{cases}$, 解得: $\vec E=\vec E_0e^{i(\vec k\cdot\vec x-\omega t)}$, $\vec k=\vec \beta+i\vec \alpha$\par
+\qquad 即$\vec E=\vec E_0e^{-\vec \alpha \cdot\vec x}e^{i(\vec\beta\cdot\vec x-\omega t)}$
+
+\clearpage
+
+[\textbf{导体内亥姆霍斯方程解的意义}]\par
+\qquad 衰减常数: $\vec\alpha$;\par
+\qquad 相位常数: $\vec\beta$.\par
+\qquad \qquad $\begin{cases}\beta^2-\alpha^2=\omega^2\mu\varepsilon\\\vec\alpha\cdot\vec\beta=\frac{1}{2}\omega\mu\sigma \end{cases}$, $\vec\alpha$与$\vec\beta$方向不常一致.\par
+
+[\textbf{垂直入射导体的衰减常数和相位常数}]\par
+\qquad $\begin{cases}\alpha=\omega\sqrt{\mu\varepsilon}\sqrt{\frac{1}{2}\left(\sqrt{\frac{\sigma^2}{\omega^2\varepsilon^2}+1}-1\right)}\\\beta=\omega\sqrt{\mu\varepsilon}\sqrt{\frac{1}{2}\left(\sqrt{\frac{\sigma^2}{\omega^2\varepsilon^2}+1}+1\right)}\end{cases}$, 良导体近似: $\begin{cases}\alpha\approx \sqrt{\frac{\omega\mu\sigma}{2}}\\\beta\approx\sqrt{\frac{\omega\mu\sigma}{2}}\end{cases}$\par
+
+[\textbf{穿透深度}] $\delta=\frac{1}{\alpha}\approx \sqrt{\frac{2}{\omega\mu\sigma}}$.\par
+
+[\textbf{趋肤效应}] 对高频电磁波, 电磁场以及与之相互作用的高频电流仅集中于表面薄层内.\par
+
+[\textbf{垂直入射导体情形下的磁场}] $\vec H=\frac{1}{\omega\mu}\vec k\times\vec E=\frac{1}{\omega\mu}(\vec\beta+i\vec\alpha)\times\vec E=\frac{1}{\omega\mu}(\beta+i\alpha)\vec e_n\times\vec E$.\par
+\qquad 良导体近似: $\vec H\approx \sqrt{\frac{\sigma}{2\omega\mu}}(1+i)\vec e_n\times\vec E=\sqrt{\frac{\sigma}{\omega\mu}}e^{i\frac{\pi}{4}}\vec e_n\times\vec E$, 磁场比电场滞后$\frac{\pi}{4}$.\par
+
+[\textbf{良导体中磁场与电场强度之比}] $\sqrt{\frac{\mu}{\varepsilon}}\left|\frac{H}{E}\right|=\sqrt{\frac{\sigma}{\omega\varepsilon}}>>1$.\par
+
+[\textbf{导体反射电场}] $\frac{E'}{E}=-\frac{1+i-\sqrt{\frac{2\omega\varepsilon_0}{\sigma}}}{1+i+\sqrt{\frac{2\omega\varepsilon_0}{\sigma}}}$.\par
+
+[\textbf{反射系数}] $R=\left|\frac{E'}{E}\right|^2=\frac{\left(1-\sqrt{\frac{2\omega\varepsilon_0}{\sigma}}\right)^2+1}{\left(1+\sqrt{\frac{2\omega\varepsilon_0}{\sigma}}\right)^2+1}$.\par
+\qquad 良导体近似: $R\approx 1-2\sqrt{\frac{2\omega\varepsilon_0}{\sigma}}$.\par
+
+\clearpage
+
+\large 
+\begin{center}
+ \textbf{4.有界空间的电磁波}
+\end{center}
+
+[\textbf{理想导体边界}] 导体表面上, 电场线与界面正交, 磁感线与界面相切.\par
+\qquad $\begin{cases}\vec e_n\times\vec E=\vec 0\\\vec e_n\times\vec H=\vec\alpha\\\vec\nabla\cdot\vec E=0, \quad(\frac{\partial E_n}{\partial n}=0)\end{cases}$, 法线由导体指向介质.\par
+
+[\textbf{波动方程$\vec\nabla^2 u+k^2u=0$的驻波解}] \\
+$u(x,y,z)=(C_1\cos{k_xx}+D_1\sin{k_xx})(C_2\cos{k_yy}+D_2\sin{k_yy})(C_3\cos{k_zz}+D_3\sin{k_zz})$.\par
+
+[\textbf{谐振腔电场的解}] $\begin{cases}E_x(x,y,z)=A_1\cos{\frac{m\pi}{L_1}x}\sin{\frac{n\pi}{L_2}y}\sin{\frac{p\pi}{L_3}z}\\E_y(x,y,z)=A_2\sin{\frac{m\pi}{L_1}x}\cos{\frac{n\pi}{L_2}y}\sin{\frac{p\pi}{L_3}z}\\E_z(x,y,z)=A_3\sin{\frac{m\pi}{L_1}x}\sin{\frac{n\pi}{L_2}y}\cos{\frac{p\pi}{L_3}z}\end{cases}$, $m,n,p\in Z$.\par
+
+[\textbf{谐振腔的半波数目}] $m:k_x=\frac{m\pi}{L_1}$, $n:k_y=\frac{n\pi}{L_2}$, $p:k_z=\frac{p\pi}{L_3}$.\par
+
+[\textbf{谐振腔方程}] $\begin{cases}k_x=\frac{m\pi}{L_1}, k_y=\frac{n\pi}{L_2}, k_z=\frac{p\pi}{L_3}, (m,n,p\in Z)\\\vec\nabla\cdot\vec E=0\quad (k_xA_1+k_yA_2+k_zA_3=0)\end{cases}$.\par
+
+[\textbf{谐振波模(本征振荡)}] 满足谐振腔方程的电磁场. 对每一组$(m,n,p)$有两种独立的偏振波模.\par
+
+[\textbf{谐振腔本征频率}] $\omega_{mnp}=\frac{\pi}{\sqrt{\mu\varepsilon}}\sqrt{\left(\frac{m}{L_1}\right)^2+\left(\frac{n}{L_2}\right)^2+\left(\frac{p}{L_3}\right)^2}$, 由$k_x^2+k_y^2+k_z^2=k_2=\omega^2\mu\varepsilon$得出.\par
+\qquad 最低频率谐振波模: 当$L_1\ge L_2\ge L_3$时为$(1,1,0)$, 谐振频率$f_{110}=\frac{1}{2\sqrt{\mu\varepsilon}}\sqrt{\frac{1}{L_1^2}+\frac{1}{L_2^2}}$, 谐振波长$\lambda_{110}=\frac{2}{\sqrt{\frac{1}{L_1^2}+\frac{1}{L_2^2}}}$.\par
+
+[\textbf{谐振波模的性质}] 当$m,n,p$中有两个为零时, $\vec E=0$.\par
+
+[\textbf{矩形波导中电场的解}] $\begin{cases}E_x(x,y,z)=A_1\cos{\frac{m\pi}{a}x}\sin{\frac{n\pi}{b}y}e^{ik_zz}\\E_y(x,y,z)=A_2\sin{\frac{m\pi}{a}x}\cos{\frac{n\pi}{b}y}e^{ik_zz}\\E_z(x,y,z)=A_3\sin{\frac{m\pi}{a}x}\sin{\frac{n\pi}{b}y}e^{k_zz}\end{cases}$, $m,n,p\in Z$.\par
+
+[\textbf{矩形波导的半波数目}] $m:k_x=\frac{m\pi}{a}$, $n:k_y=\frac{n\pi}{b}$.\par
+
+[\textbf{矩形波导方程}] $\begin{cases}k_x=\frac{m\pi}{a}, k_y=\frac{n\pi}{b}, (m,n\in Z)\\\vec\nabla\cdot\vec E=0\quad (k_xA_1+k_yA_2-ik_zA_3=0)\end{cases}$.\par
+
+[\textbf{矩形波导中的磁场}] $\vec H=-\frac{i}{\omega\mu}\vec\nabla\times\vec E$.\par
+
+\clearpage
+
+[\textbf{横电波(TE)}] $E_z=0$.\par
+
+[\textbf{横磁波(TM)}] $H_z=0$.\par
+
+[\textbf{横电磁波(TEM)}] $E_z=0, H_z=0$.\par
+
+[\textbf{矩形波导截止频率}] $\omega_{c,mn}=\frac{\pi}{\sqrt{\mu\varepsilon}}\sqrt{\left(\frac{m}{a}\right)^2+\left(\frac{n}{b}\right)^2}$.\par
+\qquad 最低截止频率: 当$a>b$时, $TE_{10}$波有$\omega_{c,10}=\frac{\pi}{a\sqrt{\mu\varepsilon}}$, 截止频率$f_{c,10}=\frac{1}{2a\sqrt{\mu\varepsilon}}$, 真空时截止频率$f_{c,10}=\frac{c}{2a}$(截止波长$\lambda_{c,10}=2a$).\par
+
+[\textbf{矩形波导中$TE_{10}$波的特点}]\par
+\qquad 电场: $\begin{cases}E_x=E_z=0\\E_y=A_2\sin{\frac{\pi}{a}x}e^{ik_zz}\end{cases}$, 磁场: $\begin{cases}H_x=-\frac{k_z}{\omega\mu}A_2\sin{\frac{\pi}{a}x}e^{ik_zz}\\H_y=0\\H_z=-\frac{i\pi}{\omega\mu a}A_2\cos{\frac{\pi}{a}x}e^{ik_zz}\end{cases}$.\par
+\qquad 设$H_z$振幅为$H_0$, 则$A_2=\frac{i\omega\mu a}{\pi}H_0$.\par
+\qquad \qquad 电场: $\begin{cases}E_x=E_z=0\\E_y=\frac{i\omega\mu a}{\pi}H_0\sin{\frac{\pi}{a}x}e^{ik_zz}\end{cases}$, 磁场: $\begin{cases}H_x=-\frac{ik_za}{\pi}H_0\sin{\frac{\pi}{a}x}e^{ik_zz}\\H_y=0\\H_z=H_0\cos{\frac{\pi}{a}x}e^{ik_zz}\end{cases}$.\par
+
+[\textbf{矩形波导中$TE_{10}$波的管壁电流}] 由$\vec e_n\times\vec H=\vec \alpha$知矩形波导中$TE_{10}$波产生的电流与磁感线正交, 没有纵向电流.\par
+
+
+
+\end{document}

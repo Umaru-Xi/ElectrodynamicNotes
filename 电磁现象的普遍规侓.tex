@@ -1,0 +1,171 @@
+\include{header}
+
+\begin{document}
+ \begin{center} 
+ \Large \textbf{电磁现象的普遍规律}
+\end{center}
+ 
+\large 
+\begin{center}
+ \textbf{1.真空中的静电场与恒磁场}
+\end{center}
+
+[\textbf{库仑定律}] $\vec F=\frac{1}{4\pi\varepsilon_0}\frac{q_1q_2\vec r}{r^3}$, 真空电容率$\varepsilon_0=8.85\times 10^{-12}F/m$.\par
+
+[\textbf{高斯定理(电场散度)}] $\oint_S\vec E\cdot d\vec S=\frac{\int_V\rho dV}{\varepsilon_0}=\frac{Q}{\varepsilon_0}$, 微分形式$\vec \nabla\cdot\vec E=\frac{\rho}{\varepsilon_0}$.\par
+
+[\textbf{静电场旋度}] $\oint_L\vec E\cdot d\vec l=0$, 微分形式:$\vec \nabla\times\vec E=0$.\par
+
+[\textbf{电荷守恒定律}] $\vec \nabla\cdot \vec J+\frac{\partial \rho}{\partial t}=0$.\par
+
+[\textbf{毕奥-萨伐尔定律}] $\vec B=\frac{\mu_0}{4\pi}\int_V\frac{\vec J(\vec{x'})\times \vec r}{r^3}dV'$, 对于闭合回路$L$有$\vec B=\frac{\mu_0}{4\pi}\oint_L\frac{Id\vec l\times\vec r}{r^3}\cdot d\vec l$.\par
+
+[\textbf{恒电流磁场环量(旋度)}] $\oint_L \vec B\cdot d\vec l=\mu_0\int_S\vec J\cdot d\vec S=\mu_0I$, 微分形式$\vec \nabla\times\vec B=\mu_0\vec J$.\par
+
+[\textbf{磁场散度}] $\vec\nabla\times\vec B=0$.\par
+
+[\textbf{磁场散度和旋度公式证明}] \par
+\qquad 由毕奥-萨伐尔定律$\vec B=\frac{\mu_0}{4\pi}\oint_V\frac{\vec J(\vec{x'}\times \vec r)}{r^3}dV'$和$\vec \nabla\frac{1}{r}=-\frac{\vec r}{r^3}$得:$\vec B=\frac{\mu_0}{4\pi}\int_V\vec J(\vec{x'})\times \vec\nabla(-\frac{1}{r})dV'$\par
+\qquad\quad 因$\vec\nabla$只作用于变量$x$上,所以根据矢量外积的交换率有$\vec B=\frac{\mu_0}{4\pi}\int_V\vec\nabla\times[\vec J(\vec{x'})\frac{1}{r}]dV'$\par
+\qquad \qquad 即:$\vec B=\vec\nabla\times\frac{\mu_0}{4\pi}\int_V\vec J(\vec{x'})\frac{1}{r}dV'$\par
+\qquad \quad 引入磁矢势$\vec A=\frac{\mu_0}{4\pi}\int_V\vec J(\vec{x'})\frac{1}{r}dV'$有:$\vec B=\vec \nabla\times\vec A$\par
+\qquad 综上所述, 磁场散度$\vec\nabla\cdot\vec B=\vec\nabla\cdot(\vec \nabla\times\vec A)=0$\par
+\qquad $\vec\nabla\times\vec B=\vec\nabla\times(\vec\nabla\times\vec A)=\vec\nabla(\vec\nabla\cdot\vec A)-\vec A(\vec\nabla\cdot\vec\nabla)=\vec\nabla(\vec\nabla\cdot\vec A)-\vec\nabla^2\vec A$\par
+\qquad \quad$\vec\nabla\cdot\vec A=\frac{\mu_0}{4\pi}\vec\nabla\cdot\int_V\vec J(\vec{x'})\frac{1}{r}dV'=\frac{\mu_0}{4\pi}\int_V\vec J(\vec{x'})\cdot\vec\nabla\frac{1}{r}dV'$\par
+\qquad\qquad 由$\vec\nabla\cdot[\vec J(\vec{x'})\frac{1}{r}]=\frac{1}{r}\vec\nabla\cdot\vec J(\vec{x'})+\vec J(\vec{x'})\cdot\nabla\frac{1}{r}=\vec J(\vec{x'})\cdot\nabla\frac{1}{r}$\par
+\qquad\qquad \quad 得:$\vec\nabla\cdot\vec A=\frac{\mu_0}{4\pi}\int_V\vec\nabla\cdot[\vec J(\vec{x'})\frac{1}{r}]dV'=\frac{\mu_0}{4\pi}\oint_S\vec J(\vec{x'})\frac{1}{r}\cdot d\vec S$\par
+\qquad \qquad 因$V$内包括所有电流,所以没有电流通过曲面$S$, 即:$\vec\nabla\cdot\vec A=0$\par
+\qquad\quad $\vec\nabla^2\vec A=\frac{\mu_0}{4\pi}\int_V\vec J(\vec{x'})\vec\nabla^2\frac{1}{r}dV'=\frac{\mu_0}{4\pi}\int_V\vec J(\vec{x'})\vec\nabla\cdot(-\frac{\vec r}{r^3})dV'=-\frac{\mu_0}{4\pi}\int_V\vec J(\vec{x'})\vec\nabla\cdot\frac{\vec r}{r^3}dV'$\par
+\qquad \qquad 对于$|\vec r|\ne 0$(即$\vec x\ne \vec x'$)有$\vec\nabla\cdot\frac{\vec r}{r^3}=-\frac{3\vec r}{r^5}\cdot\vec r+3\frac{1}{r^3}=0$\par
+\qquad \qquad 因此$\vec\nabla^2\vec A$除在源点$\vec x=\vec x'$外均为零, 可以直接取$\vec J(\vec{x'})=\vec J(\vec{x})$\par
+\qquad \qquad 且$\vec r=\vec x-\vec {x'}$有$\vec\nabla=-\vec\nabla'$\par
+\qquad \qquad \quad 即有:$\vec\nabla^2\vec A=\frac{\mu_0}{4\pi}\vec J(\vec{x})\int_V\vec\nabla' \cdot\frac{\vec r'}{r^3}dV'=\frac{\mu_0}{4\pi}\vec J(\vec x)\oint_S\frac{\vec r}{r^3}\cdot d\vec S$\par
+\qquad \qquad 因源-场失径$\vec r$与场区面元$d\vec S$方向相反\par
+\qquad \qquad \quad 所以$\vec\nabla^2\vec A=-\frac{\mu_0}{4\pi}\vec J(\vec x)\oint_S\frac{dS}{r^2}=-\frac{\mu_0}{4\pi}\vec J(\vec x)\oint_S d\Omega=-\mu_0\vec J(\vec x)$\par
+\qquad 综上所述, 磁场旋度$\vec\nabla\times\vec B=-(-\mu_0\vec J)=\mu_0\vec J$\par
+
+\clearpage
+
+\begin{center}
+ \textbf{2.真空中的电磁场}
+\end{center}
+
+[\textbf{电磁感应定律}] $\mathscr E=-\frac{d}{dt}\int_S\vec B\cdot d\vec S$.\par
+
+[\textbf{电场旋度(闭合回路电势)}] $\mathscr E=\oint_L\vec E\cdot d\vec l$, 微分形式$\vec\nabla\times \vec E=-\frac{\partial \vec B}{\partial t}$.\par
+
+[\textbf{位移电流}] $\vec J_D=\varepsilon_0\frac{\partial\vec E}{\partial t}$.\par
+
+[\textbf{电流的连续性方程}] $\vec\nabla\cdot(\vec J+\vec J_D)=0$.\par
+
+[\textbf{磁场旋度}] $\vec\nabla\times\vec B=\mu_0\vec J+\mu_0\varepsilon_0\frac{\partial \vec E}{\partial t}$.\par
+
+[\textbf{电荷系统力密度}] $\vec f=\rho\vec E+\rho\vec v\times\vec B$.\par
+
+[\textbf{洛伦兹力}] $\vec F=q\vec E+q\vec v\times\vec B$.\par
+
+[\textbf{真空中的麦克斯韦方程组}]\par
+\qquad $\begin{cases}\vec\nabla\times\vec E=-\frac{\partial\vec B}{\partial t}\quad \\ \vec\nabla\times\vec B=\mu_0\vec J+\mu_0\varepsilon_0\frac{\partial \vec E}{\partial t}\quad \\ \vec\nabla\cdot\vec E=\frac{\rho}{\varepsilon_0}\quad \\ \vec\nabla\times\vec B=\vec 0\quad  \end{cases}$\par
+
+\begin{center}
+ \textbf{3.介质中的电磁场}
+\end{center}
+
+[\textbf{电偶极矩}] $\vec p=q\vec l$.\par
+
+[\textbf{极化强度}] $\vec P=\frac{\sum\limits_i \vec p_i}{\Delta V}$.\par
+
+[\textbf{束缚电荷密度}] $\int_V\rho_pdV=-\oint_S\vec P\cdot d\vec S$, 微分形式$\rho_p=-\vec\nabla\cdot\vec P$.\par
+
+[\textbf{束缚电荷面密度(两介质界面)}] $\sigma_p=-\vec e_n\cdot (\vec P_2-\vec P_1)$.\par
+
+[\textbf{电位移矢量}] $\vec D=\varepsilon_0\vec E+\vec P$.\par
+
+[\textbf{各项同性线性介质极化强度}] $\vec P=\chi_e\varepsilon_0\vec E$.\par
+
+[\textbf{相对电容率}] $\varepsilon_r=1+\chi_e$.\par
+
+[\textbf{介质中的电场散度}] $\vec\nabla\cdot\vec D=\rho_f$.\par
+
+[\textbf{磁矩}] $\vec m=i\vec a$.\par
+
+[\textbf{磁化强度}] $\vec M=\frac{\sum\limits_i\vec m_i}{\Delta V}$.\par
+
+[\textbf{磁化电流密度}] $\int_S\vec J_M\cdot d\vec S=\oint_L\vec M\cdot d\vec l$, 微分形式$\vec J_M=\vec\nabla\times\vec M$.\par
+
+[\textbf{极化电流}] $\vec J_p=\frac{\partial \vec P}{\partial t}=\frac{\sum\limits_ie_i\vec v_i}{\Delta V}=\frac{\partial \sum\limits_i e_i\vec x_i}{\Delta V\partial t}$.\par
+
+[\textbf{诱导电流}] 磁化电流和极化电流统称为诱导电流$\vec J_M+\vec J_p$, 诱导电流不能被直接测量.\par
+
+[\textbf{磁场强度}] $\vec H=\frac{\vec B}{\mu_0}-\vec M$.\par
+
+\clearpage
+
+[\textbf{磁场旋度}] $\vec\nabla\times\vec H=\mu_0\vec J_f+\mu_0\frac{\partial \vec D}{\partial t}$.\par
+\qquad $\vec\nabla\times\vec B=\mu_0\vec J=\mu_0(\vec J_f+\vec J_M+\vec J_p+\vec J_D)=\mu_0(\vec J_f+\vec\nabla\times\vec M+\frac{\partial \vec P}{\partial t}+\varepsilon_0\frac{\partial \vec E}{\partial t})=\mu_0(\vec J_f+\vec\nabla\times\vec M+\frac{\partial \vec D}{\partial t})$.\par
+
+[\textbf{各向同性线性介质磁化率}] $\vec M=\chi_M\vec H$.\par
+
+[\textbf{相对磁导率}] $\mu_r=1+\chi_M$.\par
+
+[\textbf{介质中的麦克斯韦方程组}] \par
+\qquad $\begin{cases} \vec\nabla\times\vec E=-\frac{\partial\vec B}{\partial t}\\ \vec\nabla\times\vec H=\vec J+\frac{\partial\vec D}{\partial t}\\ \vec\nabla\cdot\vec D=\rho\\ \vec\nabla\cdot\vec B=0 \end{cases}$\qquad 对于各向同性线性介质有 $\begin{cases}\vec D=\varepsilon \vec E\\ \vec B=\mu\vec H\\\vec J=\sigma\vec E\end{cases}$\par
+
+\begin{center}
+ \textbf{4.介质面上的电磁场}
+\end{center}
+
+[\textbf{介质中麦克斯韦方程组的积分形式}]\par
+\qquad $\begin{cases}\oint_L\vec E\cdot d\vec l=-\frac{d}{dt}\int_S\vec B\cdot d\vec S\\\oint_L\vec H\cdot d\vec l=I_f+\frac{d}{dt}\int_S\vec D\cdot d\vec S\\\oint_S\vec D\cdot d\vec S=Q_f\\\oint_S\vec B\cdot d\vec S=0\end{cases}$\par
+
+[\textbf{界面处的法向电场跃变}] $\vec D_{2n}-\vec D_{1n}=\sigma_f$, $(\oint_S\vec D\cdot d\vec S=\int_S\sigma_fdS)$.\par
+
+[\textbf{界面处的法向磁场跃变}] $\vec B_{2n}-\vec B_{1n}=0$, $(\oint_S\vec B\cdot d\vec S=0)$.\par
+
+[\textbf{界面处的切向电场跃变}] $\vec E_{2n}-\vec E_{1n}=\vec 0$, $(\oint_L\vec E\cdot d\vec l=-\frac{d}{dt}\int_S\vec B\cdot d\vec S$,其中$\frac{\partial \vec B}{\partial t}$有限).\par
+
+[\textbf{界面处的切向磁场跃变}] $\vec H_{2n}-\vec H_{1n}=\vec\alpha_f$, $(\oint_L\vec H\cdot d\vec l=\int_L\vec\alpha_f\cdot d\vec l+\frac{d}{dt}\int_S\vec D\cdot d\vec S$, 其中$\frac{\partial \vec D}{\partial t}$有限).\par
+
+[\textbf{界面上的电磁场变化}]\par
+\qquad $\begin{cases}\vec e_n\cdot(\vec D_{2n}-\vec D_{1n})=\sigma_f\\\vec e_n\cdot(\vec B_{2n}-\vec B_{1n})=0\\\vec e_n\times(\vec E_{2n}-\vec E_{1n})=\vec 0\\\vec e_n\times(\vec H_{2n}-\vec H_{1n})=\vec \alpha_f\end{cases}$
+
+\clearpage
+
+\begin{center}
+ \textbf{5.电磁场的能量}
+\end{center}
+
+[\textbf{电磁场能量守恒定律}] $-\oint_S\vec S\cdot d\vec\sigma=\frac{d}{dt}\int_V w dV+\int_V\vec f\cdot\vec vdV$.\par
+\qquad \textbf{流入能量}: $-\oint_S\vec S\cdot d\vec\sigma$;\par
+\qquad \textbf{电磁能增量}: $\frac{d}{dt}\int_V w dV$;\par
+\qquad \textbf{场对电荷做功}: $\int_V\vec f\cdot\vec vdV$.\par
+
+[\textbf{电磁场能量密度}] $\frac{\partial w}{\partial t}=\vec E\cdot\frac{\partial\vec D}{\partial t}+\vec H\cdot\frac{\partial \vec B}{\partial t}$.\par
+
+[\textbf{电磁场能流密度(坡印廷矢量)}] $\vec S=\vec E\times\vec H$.\par
+
+[\textbf{电磁场能量密度和能流密度公式证明}] \par
+\qquad 由电磁场能量守恒定律:$-\oint_S\vec S\cdot d\vec\sigma=\frac{d}{dt}\int_V w dV+\int_V\vec f\cdot\vec vdV$\par
+\qquad \quad 得微分形式:$-\vec\nabla\cdot\vec S=\frac{\partial w}{\partial t}+\vec f\cdot\vec v$, 即$-\vec f\cdot\vec v=\vec\nabla\cdot\vec S+\frac{\partial w}{\partial t}$\par
+\qquad 由电荷在磁场中受力的洛伦兹力密度表达式$\vec f=\rho\vec E+\rho\vec v\times\vec B$\par
+\qquad \quad 得:$-\vec f\cdot\vec v=-\rho\vec v\cdot\vec E=-\vec J\cdot\vec E$\par
+\qquad 由磁场旋度的麦克斯韦方程$\vec\nabla\times\vec H=\vec J+\frac{\partial \vec D}{\partial t}$\par
+\qquad \quad 得:$\vec J=\vec\nabla\times\vec H-\frac{\partial\vec D}{\partial t}$\par
+\qquad $-\vec f\cdot\vec v=-\vec J\cdot\vec E=-\vec E\cdot(\vec\nabla\times\vec H)+\vec E\cdot\frac{\partial \vec D}{\partial t}$\par
+\qquad 因为$\vec\nabla\cdot(\vec E\times\vec H)=(\vec\nabla\times\vec E)\cdot\vec H-(\vec\nabla\times\vec H)\cdot\vec E$\par
+\qquad \quad 所以$-\vec f\cdot\vec v=-\vec H\cdot(\vec\nabla\times\vec E)+\vec\nabla\cdot(\vec E\times\vec H)+\vec E\cdot\frac{\partial\vec D}{\partial t}$\par
+\qquad 由电场旋度的麦克斯韦方程$\vec\nabla\times\vec E=-\frac{\partial\vec B}{\partial t}$\par
+\qquad \quad 得$-\vec f\cdot\vec v=\vec\nabla\cdot(\vec E\times\vec H)+\vec H\cdot\frac{\partial\vec B}{\partial t}+\vec E\cdot\frac{\partial\vec D}{\partial t}$\par
+\qquad 根据电磁场能量守恒定律的微分形式\par
+\qquad \quad 得:$\vec\nabla\cdot(\vec E\times\vec H)+\vec H\cdot\frac{\partial\vec B}{\partial t}+\vec E\cdot\frac{\partial \vec D}{\partial t}=\vec\nabla\times\vec S+\frac{\partial w}{\partial t}$\par
+\qquad 两边对比得:\par
+\qquad \quad 电磁场能流密度(坡印廷矢量)的可能形式: $\vec S=\vec E\times\vec H$\par
+\qquad \quad 电磁场能量密度的可能形式: $\frac{\partial w}{\partial t}=\vec E\cdot\frac{\partial\vec D}{\partial t}+\vec H\cdot\frac{\partial\vec B}{\partial t}$
+
+[\textbf{真空中的电磁场能量}]\par
+\qquad \textbf{能量密度}: $w=\frac{1}{2}(\varepsilon_0E^2+\frac{1}{\mu_0}B^2)$\qquad \textbf{能流密度}: $\vec S=\frac{1}{\mu_0}\vec E\times\vec B$\par
+
+[\textbf{线性介质中的电磁场能量}]\par
+\qquad \textbf{能量密度}: $w=\frac{1}{2}(\vec E\cdot\vec D+\vec H\cdot\vec B)$
+
+\end{document}

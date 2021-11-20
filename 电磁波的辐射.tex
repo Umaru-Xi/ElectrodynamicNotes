@@ -1,0 +1,169 @@
+\include{header}
+
+\begin{document}
+ \begin{center} 
+ \Large \textbf{电磁波的辐射}
+\end{center}
+ 
+\large 
+\begin{center}
+ \textbf{1.规范变换}
+\end{center}
+
+[\textbf{电磁场的势}] $\vec E=-\vec\nabla\varphi - \frac{\partial\vec A}{\partial t}$.\par
+
+[\textbf{规范不唯一的证明}]\par
+\qquad 设$\psi$为任意时空函数,作规范变换: $\begin{cases}\vec A\rightarrow\vec A' = \vec A+\vec\nabla\psi\\\varphi\rightarrow\varphi'=\varphi - \frac{\partial \psi}{\partial t}\end{cases}$\par
+\qquad 此时$\begin{cases}\vec B'=\vec\nabla\times\vec A'=\vec\nabla\times\vec A+\vec\nabla\times\vec\nabla\psi=\vec\nabla\times\vec A=\vec B\\\vec E'=-\vec\nabla\varphi'-\frac{\partial \vec A'}{\partial t}=-\vec\nabla\varphi+\frac{\partial \vec\nabla\psi}{\partial t}-\frac{\partial\vec A}{\partial t}-\frac{\partial \vec\nabla\psi}{\partial t}=-\vec\nabla\varphi-\frac{\partial\vec A}{\partial t}=\vec E\end{cases}$.\par
+
+[\textbf{规范变换与规范不变性}] 当势作规范变换时, 所有物理量与物理规律都应该保持不变. 这种不变性称为规范不变性.\par
+
+[\textbf{规范条件}]\par
+\qquad 库伦规范: $\vec\nabla\cdot\vec A=0$;\par
+\qquad 洛伦兹规范: $\vec\nabla\cdot\vec A+\frac{1}{c^2}\frac{\partial\varphi}{\partial t}=0$.\par
+
+\begin{center}
+ \textbf{2.电磁场的势}
+\end{center}
+
+[\textbf{真空中电磁场势的基本方程}] $\begin{cases}\vec\nabla^2\vec A-\frac{1}{c^2}\frac{\partial^2\vec A}{\partial t^2}-\vec\nabla(\vec\nabla\cdot\vec A+\frac{1}{c^2}\frac{\partial\varphi}{\partial t})=-\mu_0\vec J\\\vec\nabla^2\varphi+\frac{\partial}{\partial t}\vec\nabla\cdot\vec A=-\frac{\rho}{\varepsilon_0}\end{cases}$.\par
+\qquad 采用库伦规范: $\begin{cases}\vec\nabla^2\vec A-\frac{1}{c^2}\frac{\partial^2\vec A}{\partial t^2}-\frac{1}{c^2}\frac{\partial \varphi}{\partial t}=-\mu_0\vec J\\\vec\nabla^2\varphi=-\frac{\rho}{\varepsilon_0}\end{cases}$;\par
+\qquad 采用洛伦兹规范: $\begin{cases}\vec\nabla^2\vec A-\frac{1}{c^2}\frac{\partial^2\vec A}{\partial t^2}=-\mu_0\vec J\\\vec\nabla^2\varphi-\frac{1}{c^2}\frac{\partial^2\varphi}{\partial t^2}=-\frac{\rho}{\varepsilon_0}\end{cases}$.\par
+
+[\textbf{达朗贝尔方程}] 电荷产生标势波动, 电流产生矢势波动.\par
+\qquad $\begin{cases}\vec\nabla^2\vec A-\frac{1}{c^2}\frac{\partial^2\vec A}{\partial t^2}=-\mu_0\vec J\\\vec\nabla^2\varphi-\frac{1}{c^2}\frac{\partial^2\varphi}{\partial t^2}=-\frac{\rho}{\varepsilon_0}\\\vec\nabla\cdot\vec A+\frac{1}{c^2}\frac{\partial \varphi}{\partial t}=0\end{cases}$\par
+
+[\textbf{推迟势(达朗贝尔方程的解)}] $\begin{cases}\varphi(\vec x,t)=\frac{1}{4\pi\varepsilon_0}\int_V\frac{\rho(\vec{x'},t-\frac{r}{c})}{r}dV'\\\vec A(\vec x,t)=\frac{\mu_0}{4\pi}\int_V\frac{\vec J(\vec{x'}, t-\frac{r}{c})}{t}dV'\end{cases}$.\par
+
+\clearpage
+
+[\textbf{推迟势的推导}]\par
+\qquad 先求只在原点存在点电荷的情形. 由$\vec\nabla^2\varphi-\frac{1}{c^2}\frac{\partial^2\varphi}{\partial t^2}=-\frac{\rho}{\varepsilon_0}$, 得$\vec\nabla^2\varphi-\frac{1}{c^2}\frac{\partial^2\varphi}{\partial t^2}=-\frac{1}{\varepsilon_0}Q(t)\delta(\vec x)$.\par
+\qquad 因点电荷激发的势具有球对称性, 所以$\vec\nabla\varphi=\frac{\partial \varphi}{\partial r}$, $\vec\nabla\cdot\vec\nabla\varphi=\frac{1}{r^2\sin\theta}\frac{\partial}{\partial r}\left(r^2\sin\theta\frac{\partial\varphi}{\partial t}\right)=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial\varphi}{\partial t}\right)$\par
+\qquad \quad 即: $\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial\varphi}{\partial r}\right)-\frac{1}{c^2}\frac{\partial^2\varphi}{\partial t^2}=-\frac{1}{\varepsilon_0}Q(t)\delta(\vec x)$.\par
+\qquad 除原点外空间均无源, 有$\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial\varphi}{\partial r}\right)-\frac{1}{c^2}\frac{\partial^2\varphi}{\partial t^2}=0$.\par
+\qquad 因$\varphi$随$r$增大而减弱, 可以设$\varphi(r,t)=\frac{u(r,t)}{r}$, 即$\frac{\partial^2u}{\partial r^2}-\frac{1}{c^2}\frac{\partial^2\varphi}{\partial t^2}=0$.\par
+\quad 分离变量解$u(r,t)=R(r)T(t)$, 得$T\frac{\partial^2R}{\partial r^2}-\frac{1}{c^2}R\frac{\partial^2T}{\partial t^2}=0$.\par
+\qquad \quad 令$\frac{1}{R}\frac{\partial^2R}{\partial r^2}=\frac{1}{c^2}\frac{1}{T}\frac{\partial^2T}{\partial t^2}=-\lambda$, 得$\begin{cases}\frac{\partial^2R}{\partial r^2}+\lambda R=0\\\frac{\partial^2T}{\partial t^2}+c^2\lambda T=0\end{cases}$\par
+\qquad \quad \quad 解得: $\begin{cases}R(r)=C_1e^{i\sqrt{\lambda}r}+D_1e^{-i\sqrt{\lambda}r}\\T(t)=C_2e^{ic\sqrt{\lambda}t}+D_2e^{-ic\sqrt{\lambda}t}\end{cases}$\par
+\qquad 解得$u(r,t)=R(r)T(t)=A_1e^{ic\sqrt{\lambda}(t-\frac{r}{c})}+A_2e^{-ic\sqrt{\lambda}(t-\frac{r}{c})}+B_1e^{ic\sqrt{\lambda}(t+\frac{r}{c})}+B_2e^{-ic\sqrt{\lambda}(t+\frac{r}{c})}$\par
+\qquad \quad 设$\begin{cases}f(t-\frac{r}{c})=A_1e^{ic\sqrt{\lambda}(t-\frac{r}{c})}+A_2e^{-ic\sqrt{\lambda}(t-\frac{r}{c})}\\g(t+\frac{r}{c})=B_1e^{ic\sqrt{\lambda}(t+\frac{r}{c})}+B_2e^{-ic\sqrt{\lambda}(t+\frac{r}{c})}\end{cases}$, 得$u(r,t)=f(t-\frac{r}{c})+g(t-\frac{r}{c})$.\par
+\qquad 在$g(t+\frac{r}{c})$中, $t$随$r$的增大而减小, 表示电磁波向内收敛. 在辐射问题中应有$B_1=B_2=g(t-\frac{r}{c})=0$, 所以$u(r,t)=f(t-\frac{r}{c})$, 即$\varphi(r,t)=\frac{1}{r}f(t-\frac{r}{c})$.\par
+\qquad 与静电情形$\varphi(r)=\frac{Q}{4\pi\varepsilon_0r}$比较可以猜解: $\varphi(r,t)=\frac{Q(t-\frac{r}{c})}{4\pi\varepsilon_0r}$.\par
+\qquad \quad 为了验证此解成立,作$r=\eta\to 0$的球面, 应有: $\int_0^\eta 4\pi r^2dr\left(\vec\nabla^2-\frac{1}{c^2}\frac{\partial^2}{\partial t^2}\right)\varphi=\int_0^\eta 4\pi r^2dr\left[-\frac{Q(t-\frac{r}{c})}{\varepsilon_0}\delta(\vec x)\right]$.\par
+\qquad \qquad \qquad 此时, $\frac{1}{c^2}\frac{\partial^2}{\partial t^2}\varphi ~ \eta\to 0$, $t-\frac{r}{c}\to t$.\par
+\qquad \qquad \qquad 左式$\to \frac{Q(t)}{4\pi\varepsilon_0}\int_VdV\vec\nabla^2\frac{1}{r}=\frac{Q(t)}{4\pi\varepsilon_0}\oint_S\vec\nabla\frac{1}{r}\cdot d\vec S=-\frac{Q(t)}{\varepsilon_0}$\par
+\qquad \qquad \qquad 右式$=\int_V-\frac{Q(t)}{\varepsilon_0}\delta(\vec x)dV=-\frac{Q(t)}{\varepsilon_0}$\par
+\qquad \quad 所以$\varphi(r,t)=\frac{Q(t-\frac{r}{c})}{4\pi\varepsilon_0r}$是可行解, 当点电荷位于任意位置时: $\varphi(\vec x,t)=\frac{Q(\vec x',t-\frac{r}{c})}{4\pi\varepsilon_0r}$\par
+\qquad 对于一般的电荷分布$\rho(\vec x',t)$, 有$\varphi(\vec x,t)=\frac{1}{4\pi\varepsilon_0}\int_V\frac{\rho(\vec x', t-\frac{r}{c})}{r}dV'$;\par
+\qquad 矢势$\vec A$具有相同形势, 故$\vec A(\vec x,t)=\frac{\mu_0}{4\pi}\int_V\frac{\vec J(\vec x',t-\frac{r}{c})}{r}dV'$.\par
+
+[\textbf{推迟势的意义}] 空间某点$\vec x$在时刻$t$的场值不依赖于同一时刻的电荷电流分布, 而是决定于较早时刻$t-\frac{r}{c}$的电荷电流分布. 反映了电磁作用具有一定的传播速度.\par
+
+\clearpage
+
+\begin{center}
+ \textbf{3.电偶极辐射}
+\end{center}
+
+[\textbf{计算辐射场的一般公式}]\par
+\qquad 已知$\vec J(\vec x', t-\frac{r}{c})$时, 有$\vec A(\vec x,t)=\frac{\mu_0}{4\pi}\int_V\frac{\vec J(\vec x', t-\frac{r}{c})}{r}dV'$\par
+\qquad 设$\vec J(\vec x',t)=\vec J(\vec x')e^{-i\omega t}$, 即$\vec J(\vec x',t)=\vec J(\vec x')e^{i(\frac{\omega}{c}r-\omega t)}=\vec J(\vec x')e^{i(kr-\omega t)}$\par
+\qquad \quad 则$\vec A(\vec x,t)=\frac{\mu_0}{4\pi}\int_V\frac{\vec J(\vec x')e^{i(kr-\omega t)}}{r}dV'=\frac{\mu_0e^{-i\omega t}}{4\pi}\int_V\frac{\vec J(\vec x')e^{ikr}}{r}dV'$\par
+\qquad 设$\vec A(\vec x,t)=\vec A(\vec x)e^{-i\omega t}$, 则$\vec A(\vec x)=\frac{\mu_0}{4\pi}\int_V\frac{\vec J(\vec x')e^{ikr}}{r}dV'$\par
+\qquad 设电荷密度为$\rho(\vec x,t)=\rho(\vec x)e^{-i\omega t}$\par
+\qquad 由电流连续性$\vec\nabla\cdot\vec J+\frac{\partial \rho}{\partial t}=0$得$\vec\nabla\cdot\vec J=i\omega\rho$\par
+\qquad 由$\vec B=\vec\nabla\times\vec A$可得磁场$\vec B$.\par
+\qquad 由$\vec\nabla\times\vec B=\mu_0\varepsilon_0\frac{\partial\vec E}{\partial t}=-\frac{i\omega}{c^2}\vec E$可得电场$\vec E=\frac{ic}{k}\vec\nabla\times\vec B$.\par
+
+[\textbf{推迟作用因子}] $e^{ikr}$, 表示电磁波传至场点时有$kr$相位滞后.\par
+
+[\textbf{矢势的三个线度}]\par
+\qquad (1). 电荷分布区域线度: $l$;\par
+\qquad (2). 波长线度: $\lambda=\frac{2\pi}{k}$;\par
+\qquad (3). 电荷到场点的距离线度: $r$.\par
+
+[\textbf{小区域条件}] $l << r$, $l<<\lambda$.\par
+
+[\textbf{近区($r<<\lambda$)场的特点}] 近区内$kr<<1$, 推迟因子$e^{kr}~1$, 场保持恒定场的主要特点. 即电场具有静电场的纵向形式, 磁场也与恒定磁场相似.\par
+
+[\textbf{矢势对远区($r>>\lambda$)的展开}]\par
+\qquad 选原点在电荷分布区域内, 则$|\vec x'|$的数量级为$l$. 用$R$表示原点到场点$\vec x$的距离($R=|\vec x|$), $r$为由源点$\vec x'$到场点$\vec x$的距离, 有:\par
+\qquad \qquad $r\approx R-\vec e_R\cdot\vec x'$\par
+\qquad 由$\vec A(\vec x)=\frac{\mu_0}{4\pi}\int_V\frac{\vec J(\vec x')e^{ikr}}{r}dV'$得$\vec A(\vec x)=\frac{\mu_0}{4\pi}\int_V\frac{\vec J(\vec x')e^{ik(R-\vec e_R\cdot\vec x')}}{R-\vec e_R\cdot\vec x'}dV'$\par
+\qquad 计算远场时, 只保留$\frac{1}{R}$最低级项, 对$\frac{1}{\lambda}$保留各级项.\par
+\qquad 由$k=\frac{2\pi}{\lambda}$得$\vec A(\vec x)=\frac{\mu_0}{4\pi}\int_V\frac{\vec J(\vec x')e^{i\frac{2\pi}{\lambda}(R-\vec e_R\cdot\vec x')}}{R}dV'=\frac{\mu_0e^{ikR}}{4\pi R}\int_V\vec J(\vec x')e^{-ik\vec e_R\cdot\vec x'}dV'$.\par
+\qquad 对相因子展开$\vec A(\vec x)=\frac{\mu_0e^{ikR}}{4\pi R}\int_V\vec J(\vec x')(1-ik\vec e_R\cdot\vec x'+...)dV'$.\par
+
+\clearpage
+
+[\textbf{电偶极辐射}] \par
+\qquad 考虑矢势展开的第一项$\vec A(\vec x)=\frac{\mu_0e^{ikR}}{4\pi R}\int_V\vec J(\vec x')dV'$\par
+\qquad 设单位体积内有$n_i$个带电$q_i$且速度为$v_i$的粒子, 则单位体积内粒子对电流密度的贡献为: $n_iq_iv_i$, 有$\vec J=\sum\limits_i n_iq_i\vec v_i$.\par
+\qquad \qquad 则粒子对电流的总贡献为: $\int_V\vec J(\vec x')dV'=\sum q\vec v$\par
+\qquad 因$\sum q\vec v=\frac{d}{dt}\sum q\vec x=\frac{d\vec p}{dt}=\dot p$, 所以$\int_V\vec J(\vec x')dV'=\dot{\vec p}$.\par
+\qquad 对电偶极系统, $\vec p=Q\Delta\vec l$, $\dot{\vec p}=\frac{d\vec p}{dt}=\frac{dQ}{dt}\Delta\vec l=I\Delta\vec l=\int_V\vec J(\vec x')dV'$\par
+\qquad \qquad 则电偶极辐射$\vec A(\vec x)=\frac{\mu_0e^{ikR}}{4\pi R}\dot{\vec p}$.\par
+\qquad 因展开式只保留$\frac{1}{R}$的最低级项, $\vec\nabla$不须作用在$\frac{1}{R}$上, 有$\vec B=\vec\nabla\times\vec A=\frac{\mu_0ik\vec e_R}{4\pi R}e^{ikR}\times\dot{\vec p}$.\par
+\qquad 由$\ddot{\vec p}=-i\omega\dot{\vec p}$, 有$\dot{\vec p}=\frac{i}{\omega}\ddot{\vec p}$, 即$\vec B=\frac{e^{ikR}}{4\pi\varepsilon_0c^3R}\left(\ddot{\vec p}\times\vec e_R\right)$.\par
+\qquad 由$\vec E=\frac{ic^2}{\omega}\vec\nabla\times\vec B$得$\vec E=\frac{e^{ikR}}{4\pi\varepsilon_0c^2R}\left(\ddot{\vec p}\times\vec e_R\right)\times\vec e_R$.\par
+\qquad 在球坐标系中, 选$\vec p$的方向为极轴方向,则:\par
+\qquad \qquad $\begin{cases}\vec B=\frac{\ddot pe^{ikR}}{4\pi\varepsilon_0c^3R}\sin\theta\vec e_\varphi\\\vec E=\frac{\ddot pe^{ikR}}{4\pi\varepsilon_0c^2R}\sin\theta\vec e_\theta\end{cases}$
+
+[\textbf{电偶极辐射的角分布}] $\vec B$总是横向的(在纬线上), $\vec E$在经面上闭合. 由$\vec\nabla\cdot\vec E=0$可知$\vec E$必须完全闭合, 即不可能完全横向. 电偶极辐射只在略去$\frac{1}{R}$高次项后才近似为空间中的$TEM$波.
+
+[\textbf{电偶极辐射的能流}] $\bar{\vec S}=\frac{|\ddot{\vec p}|^2\sin^2\theta}{32\pi^2\varepsilon_0c^3R^2}\vec e_R$.\par
+\qquad (1). 在$\theta=90^\circ$方向上辐射最强;\par
+\qquad (2). 在$\theta=0^\circ$和$\theta=180^\circ$(沿电偶极矩轴线)方向没有辐射.\par
+
+[\textbf{电偶极辐射功率}] $P=\oint|\bar{\vec S}|R^2d\Omega=\frac{1}{4\pi\varepsilon_0}\frac{|\ddot{\vec p}|^2}{3c^3}$.\par
+
+\begin{center}
+ \textbf{4.电磁场的动量与动量守恒}
+\end{center}
+
+[\textbf{电磁场动量守恒}] $\vec f=[\varepsilon_0(\vec\nabla\cdot\vec E)\vec E+\varepsilon_0(\vec\nabla\times\vec E)\times\vec E+\frac{1}{\mu_0}(\vec\nabla\cdot\vec B)\vec B+\frac{1}{\mu_0}(\vec\nabla\times\vec B)\times\vec B]-\varepsilon_0\frac{\partial}{\partial}(\vec E\times\vec B)$.\par
+
+[\textbf{电磁场动量守恒推导}]\par
+\qquad 由$\vec f=\rho\vec E+\vec J\times\vec B$和$\vec\nabla\cdot\vec E=\frac{\rho}{\varepsilon_0}$得$\vec f=\varepsilon_0(\vec\nabla\cdot\vec E)\vec E+\vec J\times\vec B$\par
+\qquad 由$\vec\nabla\times\vec B=\mu_0\vec J+\mu_0\varepsilon_0\frac{\partial\vec E}{\partial t}$得$\vec f=\varepsilon_0(\vec\nabla\cdot\vec E)\vec E+\frac{1}{\mu_0}(\vec\nabla\times\vec B)\times\vec B-\varepsilon_0\frac{\partial\vec E}{\partial t}\times\vec B$\par
+\qquad 由$\vec\nabla\cdot\vec B=0$得$\vec f=\varepsilon_0(\vec\nabla\cdot\vec E)\vec E+\frac{1}{\mu_0}(\vec\nabla\cdot\vec B)\vec B+\frac{1}{\mu_0}(\vec\nabla\times\vec B)\times\vec B-\varepsilon_0\frac{\partial\vec E}{\partial t}\times\vec B$\par
+\qquad 由$\frac{\partial}{\partial t}(\vec E\times\vec B)=\frac{\partial\vec E}{\partial t}\times\vec B+\vec E\times\frac{\partial\vec B}{\partial t}$得$\varepsilon_0\frac{\partial\vec E}{\partial t}\times\vec B=\varepsilon_0\frac{\partial}{\partial t}(\vec E\times\vec B)-\varepsilon_0\vec E\times\frac{\partial\vec B}{\partial t}$\par
+\qquad 由$\vec\nabla\times\vec E=-\frac{\partial\vec B}{\partial t}$得$\varepsilon_0\frac{\partial\vec E}{\partial t}\times\vec B=\varepsilon_0\frac{\partial}{\partial t}(\vec E\times\vec B)-\varepsilon_0(\vec\nabla\times\vec E)\times\vec E$\par
+\qquad 综上所述, $\vec f=[\varepsilon_0(\vec\nabla\cdot\vec E)\vec E+\varepsilon_0(\vec\nabla\times\vec E)\times\vec E+\frac{1}{\mu_0}(\vec\nabla\cdot\vec B)\vec B+\frac{1}{\mu_0}(\vec\nabla\times\vec B)\times\vec B]-\varepsilon_0\frac{\partial}{\partial}(\vec E\times\vec B)$.\par
+
+\clearpage
+
+[\textbf{电磁场的动量密度}] $\vec g=\varepsilon_0\vec E\times\vec B=\frac{1}{c^2}\vec S$.\par
+
+\begin{center}
+ \textbf{5.天线的辐射}
+\end{center}
+
+[\textbf{短天线的辐射功率}] $P=\frac{\pi I_0^2}{12}\sqrt{\frac{\mu_0}{\varepsilon_0}}\left(\frac{l}{\lambda}\right)^2$.\par
+\qquad 设天线长为$l$, 中心馈电点电流最大且为$I_0$, 在两端点电流为$0$.\par
+\qquad 短天线满足$l<<\lambda$, 天线上的电流分布近似线性:$I(z)=\left(1-\frac{2}{l}|z|\right)I_0,\quad (|z|\le \frac{1}{2}l)$.\par
+\qquad 由$\dot{\vec p}=\int_V\vec JdV'$得$\dot{\vec p}=\int_{-\frac{1}{2}l}^{\frac{1}{2}l}I(z)dz=\frac{1}{2}I_0\vec l$\par
+\qquad 短天线的辐射功率$P=\frac{|\ddot{\vec p}|^2}{4\pi\varepsilon_0}\frac{1}{c^3}=\frac{\pi I_0^2}{12}\sqrt{\frac{\mu_0}{\varepsilon_0}}\left(\frac{l}{\lambda}\right)^2$.\par
+
+[\textbf{短天线辐射电阻}] $R_r=\frac{\pi}{6}\sqrt{\frac{\mu_0}{\varepsilon_0}}\left(\frac{l}{\lambda}\right)^2,\quad (l<<\lambda)$.\par
+
+[\textbf{长线天线的矢势}]\par
+\qquad 由$\vec\nabla\cdot\vec A+\frac{1}{c^2}\frac{\partial\varphi}{\partial t}$和$\vec E=-\vec\nabla\varphi-\frac{\partial\vec A}{\partial t}$, 且长线天线电流只沿$z$方向, $\vec A$也只沿$z$方向.\par
+\qquad 由$\begin{cases}\frac{\partial A_z}{\partial z}+\frac{1}{c^2}\frac{\partial \varphi}{\partial t}=0\\ E_z=-\frac{\partial\varphi}{\partial z}-\frac{\partial A_z}{\partial t}\end{cases}$得$\frac{1}{c^2}\frac{E_z}{\partial t}=\frac{\partial^2A_z}{\partial z^2}-\frac{1}{c^2}\frac{\partial^2A_z}{\partial t^2}$\par
+\qquad 在天线表面切向方向上$E_z=0$, 所以$\frac{\partial^2A_z}{\partial z^2}-\frac{1}{c^2}\frac{\partial^2A_z}{\partial t^2}=0$\par
+\qquad $\vec A$满足推迟势$\vec A(\vec x)=\frac{\mu_0}{4\pi}\int_V\frac{\vec J(\vec x')e^{ikr}}{r}dV'$.\par
+
+[\textbf{半波天线的矢势}] $\vec A(\vec x)=\frac{\mu_0I_0e^{ikR}}{2\pi kR}\frac{\cos{\left(\frac{\pi}{2}\cos\theta\right)}}{\sin^2\theta}\vec e_z$.\par
+
+[\textbf{半波天线的场}] $\begin{cases}\vec B(\vec x)=-i\frac{\mu_0I_0e^{ikR}}{2\pi R}\frac{\cos{\left(\frac{\pi}{2}\cos\theta\right)}}{\sin\theta}\vec e_\varphi\\\vec E(\vec x)=c\vec B\times\vec e_R=-i\frac{\mu_0cI_0e^{ikR}}{2\pi R}\frac{\cos{\left(\frac{\pi}{2}\cos\theta\right)}}{\sin\theta}\vec e_\theta \end{cases}$
+
+[\textbf{半波天线的辐射能流密度}] $\bar{\vec S}=\frac{\mu_0cI_0^2}{8\pi^2R^2}\frac{\cos^2{\left(\frac{\pi}{2}\cos\theta\right)}}{\sin^2\theta}\vec e_R$.\par
+\qquad 辐射角由分布因子$\frac{\cos^2{\left(\frac{\pi}{2}\cos\theta\right)}}{\sin^2\theta}$确定, 与偶极辐射角分布相似, 但较集中于$\theta=90^\circ$平面上.\par
+
+[\textbf{半波天线总辐射功率}] $P=\frac{\mu_0cI_0^2}{8\pi}[\ln(2\pi\gamma)-Ci(2\pi)]$, 其中: 欧拉常数$\ln(\gamma)\approx 0.577$, 积分余弦函数$Ci(x)=-\int_x^\infty \frac{\cos t}{t}dt$.
+\qquad $P\approx 2.44\frac{\mu_0cI_0^2}{8\pi}$.\par
+
+[\textbf{半波天线的辐射电阻}] $R_r\approx\frac{\mu_0c}{4\pi}\times 2.44\approx 73.2\Omega$
+
+\end{document}
