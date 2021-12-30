@@ -1,0 +1,131 @@
+\include{header}
+
+\begin{document}
+ \begin{center} 
+ \Large \textbf{静电场}\par
+ (第一次修订)
+\end{center}
+ 
+\large 
+\begin{center}
+ \textbf{1.静电场的方程}
+\end{center}
+
+[\textbf{正交曲线坐标系上的$\vec\nabla$算子}] \par
+\qquad (1). 梯度 $\vec\nabla =\sum\limits_i^n\frac{1}{h_i}\frac{\partial\varphi}{\partial u_i}\vec e_i$;\par
+\qquad (2). 散度 $\vec\nabla\cdot\vec f=\frac{1}{\prod\limits_i^n h_i}\left[\sum\limits_j^n\frac{\partial}{\partial u_j}\left(\frac{\prod\limits_k h_k}{h_j}f_j\right)\right]$;\par
+\qquad (3). 旋度 $\vec\nabla\times\vec f=\frac{1}{h_1h_2h_3}\left|\begin{matrix}h_1\vec e_1& h_2\vec e_2& h_2\vec e_3\\ \frac{\partial}{\partial u_1}& \frac{\partial}{\partial u_2}& \frac{\partial}{\partial u_3}\\ h_1f_1& h_2f_2& h_3f_3\end{matrix}\right|$.\par
+ 
+[\textbf{电势}] $\varphi(\vec x)=\int_V\frac{\rho(\vec x')dV'}{4\pi\varepsilon_0r}$, 有$\vec E=-\vec\nabla \varphi$.\par
+
+[\textbf{静电势的微分方程}] 对于各项同性线性介质($\vec D=\varepsilon\vec E$), 有:$\vec\nabla^2\varphi=-\frac{\rho}{\varepsilon}$.\par
+边值:$\begin{cases}
+    \vec e_n\times(\vec E_2-\vec E_1)=\vec 0 \\ 
+    \vec e_n\cdot(\vec D_2-\vec D_1)=\sigma
+\end{cases}\Rightarrow
+\begin{cases}
+   \vec E_1\cdot \Delta\vec l_1=\vec E_2\cdot\Delta\vec l_2\\
+   \varepsilon_2\frac{\partial\varphi_2}{\partial n}-\varepsilon_1\frac{\partial \varphi_1}{\partial n}=-\sigma
+\end{cases}$\par
+
+[\textbf{导体静电条件}] \par
+\qquad (1). 导体内部不带净电荷,电荷只分布在表面上;\par
+\qquad (2). 导体内部电场为零;\par
+\qquad (3). 导体表面上电场必沿法线方向,导体表面必为等势面,整个导体电势相等,即$\begin{cases}\varphi =C\\\varepsilon\frac{\partial \varphi}{\partial n}=-\sigma \end{cases}$.\par
+
+[\textbf{线性介质中静电场的总能量}] $W=\frac{1}{2}\int_\infty \vec E\cdot\vec D dV$.\par
+
+\begin{center}
+ \textbf{2.静电场边值问题}
+\end{center}
+
+[\textbf{唯一性定理}] 设区域$V$内给定自由电荷分布$\rho(\vec x)$, 在$V$的边界上给定电势$\varphi|_s$或电势法线方向偏导数$\left.\frac{\partial \varphi}{\partial n}\right|_s$, 则$V$内的电场唯一确定.\par
+
+[\textbf{有导体存在的唯一性定理条件}] \par
+\qquad (1). 给定每个导体上的电势;\par
+\qquad (2). 给定每个导体上的总电荷.\par
+
+[\textbf{勒让德方程}] $(1-x^2)\frac{d^2y}{dx^2}-2x\frac{dy}{dx}+n(n+1)y=0$.\par
+\qquad 解为勒让德多项式: $P_n(x)=\frac{1}{2^nn!}\frac{d^n}{dx^n}(x^2-1)^n$.
+
+\clearpage
+
+[\textbf{轴对称情形下的拉普拉斯方程}] $\vec\nabla^2\varphi=0$.\par
+\qquad 解为: $\varphi=\sum\limits_n(a_nr^n+\frac{b_n}{r^{n+1}})P_n(\cos \theta)$.\par
+
+[\textbf{常见静电场问题边界}] \par
+\qquad (1). 绝缘介质边界: $\begin{cases}\varphi_1=\varphi_2\\ \varepsilon_1\frac{\partial \varphi_1}{\partial n}=\varepsilon_2\frac{\partial \varphi_2}{\partial n}\end{cases}$;\par
+\qquad (2). 已知电势$\varphi_0$的导体与绝缘体边界: $\varphi=\varphi_0$;\par
+\qquad (3). 已知导体电荷量$Q$的导体与绝缘体边界: $\begin{cases}\varphi=C\\ -\oint_s\varepsilon\frac{\partial\varphi}{\partial n}dS=Q\end{cases}$, 此时导体面上的自由电荷面密度可知为$\sigma=-\varepsilon\frac{\partial\varphi}{\partial n}$.\par
+
+[\textbf{静电场边值问题分类}]\par
+\qquad (1). 第一类边值问题: 给定边界$S$上的电势$\varphi_s$;\par
+\qquad (2). 第二类边值问题: 给定边界$S$上的$\left.\frac{\partial\varphi}{\partial n}\right|_s$.\par
+
+[\textbf{单位冲激函数}] $\delta(\vec x):\begin{cases}\delta(\vec x)=0\quad,\vec x\ne \vec 0\\ \int_V\delta(\vec x)dV=1\quad ,\{V|\vec x=0\in V\}\end{cases}$.\par
+
+[\textbf{单位冲激函数的性质}] \par
+\qquad (1). 若$f(\vec x)$在原点附近连续, $V$包含原点, 则$\int_Vf(\vec x)\delta(\vec x)dV=f(\vec 0)$;\par
+\qquad (2). 若$V$包含$\vec x'$, $f(\vec x)$在$\vec x=\vec x'$附近连续, 则$\int_Vf(\vec x)\delta(\vec x-\vec x')dV=f(\vec x')$.\par
+
+[\textbf{单位点电荷密度函数}] $\rho(\vec x)=\delta(\vec x-\vec x'):\begin{cases}\rho(\vec x)=\delta(\vec x-\vec x')=0\quad ,\vec x=\vec x'\\ \int_V\rho(\vec x)dV=\int_V\delta(\vec x-\vec x')dV=1\quad ,\vec x'\in V\end{cases}$.\par
+
+[\textbf{格林函数}] $\vec\nabla^2G(\vec x,\vec x')=-\frac{\delta(\vec x-\vec x')}{\varepsilon_0}$.\par
+\qquad (1). 泊松方程$\vec\nabla^2\psi(\vec x)=-\frac{\delta(\vec x-\vec x')}{\varepsilon_0}$在区域$V$的边界上有$\left.\psi\right|_s=0$,其解为泊松方程在$V$的第一类边值问题的格林函数;\par
+\qquad (2). 泊松方程$\vec\nabla^2\psi(\vec x)=-\frac{\delta(\vec x-\vec x')}{\varepsilon_0}$在区域$V$的边界上有$\left.\frac{\partial \psi}{\partial n}\right|_s=-\frac{1}{\varepsilon_0S}$,其解为泊松方程在$V$的第二类边值问题的格林函数.\par
+
+\clearpage
+
+[\textbf{常见空间的格林函数}]\par
+\qquad (1). 无界空间的格林函数: $G(\vec x,\vec x')=\frac{1}{4\pi\varepsilon_0}\frac{1}{\sqrt{(x-x')^2+(y-y')^2+(z-z')^2}}$;\par
+\qquad (2). 上半空间的格林函数: $G(\vec x,\vec x')=\frac{1}{4\pi\varepsilon_0}\left[\frac{1}{\sqrt{(x-x')^2+(y-y')^2+(z-z')^2}}-\frac{1}{\sqrt{(x-x')^2+(y-y')^2+(z+z')^2}}\right]$;\par
+\qquad (3). 球外空间的格林函数: $G(\vec x,\vec x')=\frac{1}{4\pi\varepsilon_0}\left[\frac{1}{\sqrt{r^2+a^2-2ar\cos\theta}}-\frac{1}{\sqrt{\left(\frac{ar}{R_0}\right)^2+R_0^2-2ar\cos\theta}}\right]$.\par
+
+[\textbf{格林公式}] $\int_V(\psi\vec\nabla^2\varphi-\varphi\vec\nabla^2\psi)dV=\oint_s(\psi\vec\nabla\varphi-\varphi\vec\nabla\psi)\cdot d\vec S$.\par
+
+[\textbf{格林函数法}]\par
+\qquad 已知: $\vec\nabla^2\varphi=-\frac{\rho}{\varepsilon_0}$, 取$\psi=G(\vec x,\vec x')$.\par
+\qquad 交换$\vec x$和$\vec x'$,即得$G(\vec x',\vec x)$,$\varphi(\vec x')$.\par
+\qquad 由$\int_V\left[\varphi(\vec x')\vec\nabla'^2G(\vec x',\vec x)-G(\vec x',\vec x)\vec\nabla'^2\varphi(\vec x')\right]dV'$ \par
+\qquad \quad $=\oint_s\left[\varphi(\vec x')\vec\nabla'G(\vec x',\vec x)-G(\vec x',\vec x)\vec\nabla'\varphi(\vec x')\right]\cdot d\vec S'$和$\vec\nabla'^2G(\vec x',\vec x)=-\frac{\delta(\vec x'-\vec x)}{\varepsilon_0}$\par
+\qquad \qquad 得:$\int_V\left[\varphi(\vec x')\vec\nabla'^2G(\vec x',\vec x)-G(\vec x',\vec x)\vec\nabla'^2\varphi(\vec x')\right]dV'=-\frac{\varphi(\vec x)}{\varepsilon_0}+\int_V\frac{G(\vec x',\vec x)\rho(\vec x')}{\varepsilon_0}dV'$\par
+\qquad \quad 即:$\varphi(\vec x)=\int_VG(\vec x',\vec x)\rho(\vec x')dV'-\varepsilon_0\oint_s\left[\varphi(\vec x')\vec\nabla'G(\vec x',\vec x)-G(\vec x',\vec x)\vec\nabla'\varphi(\vec x')\right]\cdot d\vec S'$\par
+\qquad 对于第一类边值问题, 有$G(\vec x',\vec x)=0$, $\vec x'$在$S$上\par
+\qquad \quad $\varphi(\vec x)=\int_VG(\vec x',\vec x)\rho(\vec x')dV'-\varepsilon_0\oint_s\varphi(\vec x')\vec\nabla'G(\vec x',\vec x)\cdot d\vec S'$\par
+\qquad 对于第二类边值问题, 有$-\oint_s\vec\nabla'G(\vec x',\vec x)\cdot d\vec S=\frac{1}{\varepsilon_0}\Rightarrow \vec\nabla'G(\vec x',\vec x)=-\frac{1}{\varepsilon_0S}$\par
+\qquad \quad $\varphi(\vec x)=\int_VG(\vec x',\vec x)\rho(\vec x')dV'+\varepsilon_0\oint_sG(\vec x',\vec x)\vec\nabla'\varphi(\vec x')\cdot d\vec S+<\varphi>|_s$
+
+\begin{center}
+ \textbf{3.静电场的多极展开}
+\end{center}
+
+[\textbf{电偶极矩}] $\vec p=\int_V\rho(\vec x')\vec x'dV'$.\par
+
+[\textbf{电四极矩}] $\overset{\rightharpoonup\!\!\!\! \rightharpoonup}{\mathscr{D}}=\int_V3\vec x'\vec x'\rho(\vec x')dV'$.\par
+
+[\textbf{电势多极展开}] \par
+\qquad 设$f(\vec x-\vec x')=\frac{1}{|\vec x-\vec x'|}=\frac{1}{r}$\par
+\qquad \quad $f(\vec x-\vec x')=\frac{1}{r}-\vec x'\cdot\vec\nabla \frac{1}{r}+\frac{1}{2!}(\vec x'\cdot\vec\nabla)^2\frac{1}{r}+...$\par
+\qquad $\varphi(\vec x)=\int_V\frac{\rho(\vec x')dV'}{4\pi\varepsilon_0r}=\frac{1}{4\pi\varepsilon_0}\int_V\rho(\vec x')f(\vec x-\vec x')dV'=\frac{1}{4\pi\varepsilon_0}\left[\frac{Q}{r}-\vec p\cdot\vec \nabla\frac{1}{r}+\frac{1}{6}\overset{\rightharpoonup\!\!\!\! \rightharpoonup}{\mathscr{D}}:\vec\nabla\vec\nabla\frac{1}{r}+...\right]$\par
+
+\clearpage
+
+[\textbf{电势多极展开的成分}]\par
+\qquad (1). 点电荷电势: $\varphi^{(0)}=\frac{Q}{4\pi\varepsilon_0 r}$;\par
+\qquad (2). 电偶极子电势: $\varphi^{(1)}=-\frac{\vec p\cdot\vec\nabla\frac{1}{r}}{4\pi\varepsilon_0}=\frac{\vec p\cdot\vec r}{4\pi\varepsilon_0r^3}$;\par
+\qquad (3). 电四极子电势: $\varphi^{(2)}=\frac{1}{4\pi\varepsilon_0}\frac{1}{6}\overset{\rightharpoonup\!\!\!\! \rightharpoonup}{\mathscr{D}}:\vec\nabla\vec\nabla\frac{1}{r}=\frac{1}{4\pi\varepsilon_0}\frac{1}{6}\sum\limits_{i,j}\mathscr{D}_{ij}\frac{\partial^2}{\partial x_i\partial x_j}\frac{1}{r}$.\par
+
+[\textbf{电荷体系在外电场中能量的多极展开}] \par
+\qquad $W=\int_V\rho\varphi_edV=\int_V\rho(\vec x)\left[\varphi_e(0)+\sum\limits_i x_i\frac{\partial }{\partial x_i}\varphi_e(0)+\frac{1}{2!}\sum\limits_{i,j}x_ix_j\frac{\partial^2}{\partial x_i\partial x_j}\varphi_e(0)+...\right]$\par
+\qquad \quad $=Q\varphi_e(0)+\vec p\cdot\vec\nabla\varphi_e(0)+\frac{1}{6}\overset{\rightharpoonup\!\!\!\! \rightharpoonup}{\mathscr{D}}:\vec\nabla\vec\nabla\varphi_e(0)+...$\par
+
+[\textbf{电荷体系能量多极展开的成分}]\par
+\qquad (1). 点电荷能量: $W^{(0)}=Q\varphi_e(0)$;\par
+\qquad (2). 电偶极子能量: $W^{(1)}=\vec p\cdot\vec \nabla\varphi_e(0)=-\vec p\cdot\vec E_e(0)$;\par
+\qquad (3). 电四极子能量: $W^{(2)}=-\frac{1}{6}\overset{\rightharpoonup\!\!\!\! \rightharpoonup}{\mathscr{D}}:\vec\nabla\vec E_e(0)$.\par
+
+[\textbf{电偶极子在外电场中受力}] $\vec F=-\vec\nabla W^{(1)}=\vec\nabla(\vec p\cdot\vec E_e)=\vec p\cdot\vec \nabla\vec E_e$.\par
+
+[\textbf{电偶极子在外电场中受力矩}] $\vec L=\vec p\times\vec E_e$.\par
+
+\end{document}

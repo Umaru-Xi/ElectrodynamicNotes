@@ -1,0 +1,154 @@
+\include{header}
+
+\begin{document}
+ \begin{center} 
+ \Large \textbf{狭义相对论}\par
+ (第一次修订)
+\end{center}
+ 
+\large 
+\begin{center}
+ \textbf{1.相对论时空观}
+\end{center}
+
+[\textbf{相对论的基本原理}] \par
+\qquad (1). 相对性原理: 所有惯性系都是等价的;\par
+\qquad (2). 光速不变原理: 真空中的光速相对于任何惯性系沿任一方向恒为$c$, 并与光源运动无关.\par
+
+[\textbf{光速不变性的数学表述}] $x'^2+y'^2+z'^2-c^2t'^2=x^2+y^2+z^2-c^2t^2$.\par
+
+[\textbf{时空间隔}] $s^2=c^2(t_2-t_1)^2-(x_2-x_1)^2-(y_2-y_1)^2-(z_2-z_1)^2$.\par
+
+[\textbf{间隔不变性}] 设一惯性系观察两事件的时空间隔为$s^2$, 另一惯性系观察同样两个事件的间隔为$s'^2$, 有$s^2=s'^2$.\par
+
+[\textbf{洛伦兹变换}]\par
+\qquad 洛伦兹正变换: $\begin{cases}x'=\frac{x-vt}{\sqrt{1-\frac{v^2}{c^2}}}\\ y'=y,\qquad z'=z\\ t'=\frac{t-\frac{v}{c^2}x}{\sqrt{1-\frac{v^2}{c^2}}}\end{cases}$;
+\qquad 洛伦兹逆变换: $\begin{cases}x=\frac{x'+vt'}{\sqrt{1-\frac{v^2}{c^2}}}\\ y=y',\qquad z=z'\\ t=\frac{t'+\frac{v}{c^2}x'}{\sqrt{1-\frac{v^2}{c^2}}}\end{cases}$.\par
+
+[\textbf{洛伦兹变换的推导}]\par
+\qquad 设$\Sigma'$相对于$\Sigma$沿其$x$轴正方向以速度$v$运动, 两参考系均为惯性参考系, 惯性系间的变换具有线性.\par
+\qquad 由光速不变性$x'^2+y'^2+z'^2-c^2t'^2=x^2+y^2+z^2-c^2t^2$设$\begin{cases}x'=a_{11}t+a_{12}ct\\y'=y,\qquad z'=z\\ ct'=a_{12}x+a_{22}ct\end{cases}$\par
+\qquad 因$x'$与$x$同向, 所以$a_{11}>0$. 因为两惯性系时间同向流动, 所以$a_{22}>0$.\par
+\qquad $\Sigma$中一事件与$(0,0,0,0)$的间隔为$s^2=c^2t^2-x^2-y^2-z^2$, $\Sigma'$中同一时间间隔为$s'^2=c^2t'^2-x'^2-y'^2-z'^2$.\par
+\qquad 由间隔不变性$s^2=s'^2$有$\begin{cases}a_{11}^2-a_{21}^2=1\\a_{12}^2-a_{21}^2=-1\\a_{11}a_{12}-a_{21}a_{22}=0\end{cases}$, 解得$\begin{cases}a_{11}=a_{22}=\sqrt{1+a_{12}^2}\\a_{12}=a_{22}\end{cases}$.\par
+\qquad $\Sigma$中的$O'$点在$t$时刻之后在$\Sigma$中的位置为$x=vt$, 在$\Sigma'$中的位置仍然为$x'=0$, 即$0=a_{11}vt+a_{12}ct\Rightarrow \frac{a_{12}}{a_{11}}=-\frac{v}{c}$.\par
+
+\clearpage
+
+\qquad 代入原方程解得$\begin{cases}x'=\frac{x-vt}{\sqrt{1-\frac{v^2}{c^2}}}\\y'=y,\qquad z'=z\\t'=\frac{t-\frac{v}{c_2}x}{\sqrt{1-\frac{v^2}{c^2}}}\end{cases}$.\par
+\qquad 对于逆变换, 只有$v$的方向不同. 取$v$为$-v$即可.\par
+
+[\textbf{相对论的时空关系}]\par
+\qquad (1). 类光间隔: $s^2=0$, 两事件可以用光波联系, 事件$B$位于$A$的光锥面上;\par
+\qquad (2). 类时间隔: $s^2>0$, 两事件可用低于光速的作用来联系, 时间$B$位于$A$的光追之内;\par
+\qquad \qquad i. 绝对未来: $B$在$A$的上半光锥内;\par
+\qquad \qquad ii. 绝对过去: $B$在$A$的下半光锥内.\par
+\qquad (3). 类空间隔: $s^2<0$, 两事件不可能用光波或低于光速的作用联系(或$B$与$A$绝无联系), $B$位于$A$的光锥之外.\par
+
+[\textbf{证明因果律(类时间隔的性质)}]\par
+\qquad 在$\Sigma$参考系上, 以$(\vec x_1,t)$为原因事件, $(\vec x_2,t)$为结果事件, 且$t_2>t_1$.\par
+\qquad 将上述时间变换到$\Sigma'$参考系上, 有$t_2'=\frac{t_2-\frac{v}{c^2}x_2}{\sqrt{1-\frac{v^2}{c^2}}}$, $t_1'=\frac{t_1-\frac{v}{c^2}x_1}{\sqrt{1-\frac{v^2}{c^2}}}$, 即$t_2'-t_1'=\frac{t_2-t_1-\frac{v}{c^2}x_2+\frac{v}{c^2}x_1}{\sqrt{1-\frac{v^2}{c^2}}}$.\par
+\qquad 若因果律成立, 则必然有$t_2'>t_1'$, 即$t_2-t_1>\frac{v}{c^2}(x_2-x_1)$成立.\par
+\qquad 即只需证$\left|\frac{x_2-x_1}{t_2-t_1}\right|<\frac{c^2}{v}$成立.\par
+\qquad 设两事件间相互作用传递速度为$u$, 有$|x_2-x_1|=u(t_2-t_1)$, 即$uv<c^2$.\par
+\qquad 当光速为物质运动的最大速度时, $u<c$, $v<c$. 上式一定成立.\par
+\qquad 即因果律在光速为物质运动的最大速度时一定成立.\par
+
+[\textbf{同时相对性(类空间隔的性质)}] 具有类空间隔的两事件, 由于不可能发生因果关系, 其时间先后或同时都没有绝对意义, 因不同参考系而不同.在不同地点同时发生的两件事不可能存在因果关系.\par
+
+[\textbf{运动时钟延缓的推导}]\par
+\qquad 设$\Sigma'$为与物体固连的参考系, 观察到两事件发生的时刻为$t_1'$和$t_2'$, 则$\Delta\tau=t_2'-t_1'$. 因两事件发生于同一位置, 所以$\Delta s'^2=c^2\Delta\tau^2$.\par
+\qquad 设$\Sigma$为相对于$\Sigma'$运动的参考系, 观察到两事件$(\vec x_1,t^1)$和$(\vec x_2,t_2)$, 则$\Delta s^2=c^2\Delta t^2-\Delta \vec x^2$.\par
+\qquad 设$\Sigma$相对于$\Sigma'$运动的速度为$v$, 则$\frac{|\Delta \vec x|}{\Delta t}=v$.\par
+\qquad 由间隔不变性$c^2\Delta\tau^2=c^2\Delta t^2-v^2\Delta t^2$得$\Delta t=\frac{\Delta\tau}{\sqrt{1-\frac{v^2}{c^2}}}$.\par
+
+[\textbf{双生子佯谬}] 当一个时钟绕闭合路径做加速运动最后返回原地时, 它所经历的总时间小于在原地点静止时钟所经历的时间.\par
+
+\clearpage
+
+[\textbf{运动尺度缩短}] $l=l_0\sqrt{1-\frac{v^2}{c^2}}$.\par
+
+[\textbf{相对论速度变换}] $\begin{cases}u_x'=\frac{u_x-v}{1-\frac{vu_x}{c^2}}\\u_y'=\frac{u_y\sqrt{1-\frac{v^2}{c^2}}}{1-\frac{vu_x}{c^2}}\\u_z'=\frac{u_z\sqrt{1-\frac{v^2}{c^2}}}{1-\frac{vu_x}{c^2}}\end{cases}$, 非相对论极限($v\ll c$, $|u|\ll c$)时: $\begin{cases}u_x\approx u_x'-v\\u_y\approx u_y'\\u_z\approx u_z'\end{cases}$.\par
+\qquad 逆变换只需取$v$为$-v$即可.\par
+
+[\textbf{相对论速度变换的推导}]\par
+\qquad 设$u_x=\frac{dx}{dt}$, $u_y=\frac{dy}{dt}$, $u_z=\frac{dz}{dt}$为物体相对于$\Sigma$运动的速度. $\Sigma'$相对于$\Sigma$沿其$x$轴以速度$v$运动.\par
+\qquad 由洛伦兹变换$\begin{cases}x'=\frac{x-vt}{\sqrt{1-\frac{v^2}{c^2}}}\\y'=y,\qquad z'=z\\t'=\frac{t-\frac{v}{c^2}x}{\sqrt{1-\frac{v^2}{c^2}}}\end{cases}$得$\begin{cases}dx'=\frac{u_x-v}{\sqrt{1-\frac{v^2}{c^2}}}dt\\dy'=u_ydt,\qquad dz'=u_zdt\\dt'=\frac{1-\frac{v}{c^2}u_x}{\sqrt{1-\frac{v^2}{c^2}}}dt\end{cases}$.\par
+\qquad \qquad 得$\begin{cases}u_x'=\frac{dx'}{dt}=\frac{u_x-v}{1-\frac{vu_x}{c^2}}\\u_y'=\frac{dy'}{dt}=\frac{u_y\sqrt{1-\frac{v^2}{c^2}}}{1-\frac{vu_x}{c^2}}\\u_z'=\frac{dz'}{dt}=\frac{u_z\sqrt{1-\frac{v^2}{c^2}}}{1-\frac{vu_x}{c^2}}\end{cases}$.\par
+
+[\textbf{沿$x$轴方向的洛伦兹变换矩阵}] $a=\left[\begin{matrix}\gamma&0&0&i\beta\gamma\\0&1&0&0\\0&0&1&0\\-i\beta\gamma&0&0&\gamma \end{matrix}\right]$, $\begin{cases}\beta=\frac{v}{c}\\\gamma=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\end{cases}$, ($x_4=ict$).\par
+
+\clearpage
+
+\begin{center}
+ \textbf{2.相对论的四维形式}
+\end{center}
+
+[\textbf{四维协变量}] 在洛伦兹变换下有确定变换性质的物理量.\par
+
+[\textbf{四维速度矢量}] $U_\mu=\frac{dx_\mu}{d\tau}=\gamma_\mu(u_1,u_2,u_3,ic)$.\par
+\qquad 由$\frac{dt}{d\tau}=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}=\gamma_\mu$和$u_\mu=\frac{dx_\mu}{dt}$得$U_\mu=\gamma_\mu(u_1,u_2,u_3,ic)$.\par
+
+[\textbf{四维波矢量}] $k_\mu=(\vec k,i\frac{\omega}{c})$.\par
+\qquad 即$\begin{cases}k_x'=\gamma(k_x-\frac{v}{c^2}\omega)\\k_y'=k_y,\qquad k_z'=k_z\\\omega'=\gamma(\omega-vk_x)\end{cases}$, $\begin{cases}k_x=\frac{\omega}{c}\cos\theta\\k_x'=\frac{\omega'}{c}\cos\theta \end{cases}$, 其中: $\vec k$与$x$轴夹角为$\theta$, $\vec k'$与$x$轴夹角为$\theta'$.\par
+
+[\textbf{相对论的多普勒效应}] $\omega'=\omega\gamma(1-\frac{v}{c}\cos\theta)$.\par
+
+[\textbf{相对论的光行差}] $\tan\theta'=\frac{\sin\theta}{\gamma(\cos\theta-\frac{v}{c})}$.\par
+
+[\textbf{物理规律的相对论协变性}] 在参考系变换下方程形式不变的性质.\par
+
+\begin{center}
+ \textbf{3.电动力学的相对论不变性}
+\end{center}
+
+[\textbf{电流密度四维矢量}] $J_\mu=(\vec J,ic\rho)$.\par
+
+[\textbf{电荷守恒定律的四维形式}] $\frac{\partial J_\mu}{\partial x_\mu}=0$.\par
+
+[\textbf{洛伦兹标量算符}] $\Box\equiv \vec\nabla^2-\frac{1}{c^2}\frac{\partial^2}{\partial t^2}=\vec\nabla^2+\frac{\partial^2}{\partial(ict)^2}=\frac{\partial^2}{\partial x_\mu^2}$.\par
+
+[\textbf{四维势矢量}] $A_\mu=(\vec A,\frac{i}{c}\varphi)$, $\Box A_\mu=-\mu_0J_\mu$.\par
+
+[\textbf{洛伦兹条件}] $\frac{\partial A_\mu}{\partial x_\mu}=0$.\par
+
+[\textbf{电磁场张量}] $F_{\mu\nu}=\left[\begin{matrix}0&B_3&-B_2&-\frac{i}{c}E_1\\-B_3&0&B_1&-\frac{i}{c}E_2\\B_2&-B_1&0&-\frac{i}{c}E_3\\\frac{i}{c}E_1&\frac{i}{c}E_2&\frac{i}{c}E_3&0\end{matrix}\right]$.\par
+
+[\textbf{麦克斯韦方程组的协变形式}] $\begin{cases}\frac{\partial F_{\mu\nu}}{\partial x_\nu}=\mu_0J_\mu\\\frac{\partial F_{\mu\nu}}{\partial x_\lambda}+\frac{\partial F_{\nu\lambda}}{\partial x_\mu}+\frac{\partial F_{\lambda\mu}}{\partial x_\nu}=0\end{cases}$
+
+[\textbf{电磁场的变换关系(分量形式)}] $\begin{cases}E_1'=E_1,\qquad B_1'=B_1\\E_2'=\gamma(E_2-vB_3),\qquad B_2'=\gamma(B_2+\frac{v}{c^2}E_3)\\E_3'=\gamma(E_3+vB_2),\qquad B_3'=\gamma(B_3-\frac{v}{c^2}E_2)\end{cases}$.\par
+
+\clearpage
+
+[\textbf{电磁场的变换关系(矢量形式)}] $\begin{cases}\vec E'_{//}=\vec E_{//},\qquad B'_{//}=\vec B_{//}\\\vec E'_{\perp}=\gamma(\vec E+v\times\vec B)_{\perp},\qquad \vec B'_{\perp}=\gamma(\vec B-\frac{\vec v}{c^2}\times\vec E)_{\perp}\end{cases}$.\par
+
+\begin{center}
+ \textbf{4.相对论力学}
+\end{center}
+
+[\textbf{四维动量矢量}] $p_\mu=m_0U_\mu=(\vec p,p_4)$.\par
+\qquad $\vec p=\gamma m_0\vec v=\frac{m_0\vec v}{\sqrt{1-\frac{v^2}{c^2}}}$, $p_4=\gamma m_0ic=\frac{i}{c}\frac{m_0c^2}{\sqrt{1-\frac{v^2}{c^2}}}$.\par
+
+[\textbf{$p_4$的低速展开}] $p_4=\frac{i}{c}(m_0c^2+\frac{1}{2}m_0v^2+...)$.\par
+\qquad 设物体中包含的能量为$W=\frac{m_0c^2}{\sqrt{1-\frac{v^2}{c^2}}}$, 则$p_4=\frac{i}{c}W$, $W$包含物体动能. \par
+动能$T=\frac{m_0c^2}{\sqrt{1-\frac{v^2}{c^2}}}-m_0c^2$. 物体的能量$W=T+m_0c^2$.\par
+
+[\textbf{能量-动量四维矢量(四维动量)}] $p_\mu=(\vec p,\frac{i}{c}W)$.\par
+
+[\textbf{能量守恒}] $p_\mu p_\mu=\vec p^2-\frac{W^2}{c^2}=-m_0c^2$, $W=\sqrt{p^2c^2+m_0^2c^2}$.\par
+
+[\textbf{动质量}] $m=\frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}}$.\par
+
+[\textbf{质能关系}] $W=mc^2$.\par
+
+[\textbf{四维力矢量}] $K_\mu=(\vec K, \frac{i}{c}\frac{dW}{d\tau})=(\vec K,\frac{i}{c}\vec K\cdot\vec v)$.\par
+\qquad 力(不使用固有时): $\vec F=\frac{1}{\gamma}\vec K=\sqrt{1-\frac{v^2}{c^2}}\vec K$.\par
+
+[\textbf{相对论力学方程}] $\begin{cases}\vec F=\frac{d\vec p}{dt}\\\vec F\cdot\vec v=\frac{dW}{dt}\end{cases}$.\par
+
+[\textbf{洛伦兹力的相对论形式}] $\vec K=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}q(\vec E+\vec v\times\vec B)$.\par
+
+[\textbf{洛伦兹力密度}] $f_\mu=(\vec f,f_4)$.\par
+\qquad $\vec f=\rho\vec E+\vec J\times\vec B$, $f_4=\frac{i}{c}\vec J\cdot\vec E$.\par
+
+\end{document}

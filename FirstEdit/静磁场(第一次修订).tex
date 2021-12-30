@@ -1,0 +1,117 @@
+\include{header}
+
+\begin{document}
+ \begin{center} 
+ \Large \textbf{静磁场}\par
+ (第一次修订)
+\end{center}
+ 
+\large 
+\begin{center}
+ \textbf{1.静磁场的方程}
+\end{center}
+
+[\textbf{磁场的矢势}] $\int_s\vec B\cdot d\vec S=\oint_L\vec A\cdot d\vec l$ ,微分形式$\vec B=\vec \nabla\times\vec A$.\par
+
+[\textbf{矢势的任意性}] $\vec\nabla\times\vec A=\vec\nabla\times (\vec A+\vec\nabla\psi)$.\par
+
+[\textbf{矢势规范条件}] \par
+\qquad \textbf{库伦规范}: $\vec\nabla\cdot\vec A=0$;\par
+\qquad \textbf{伦敦规范}: $\vec\nabla\cdot\vec A=0$, $\vec e_n\cdot\vec A|_s=0$;\par
+\qquad \textbf{洛仑兹规范}: $\vec\nabla\cdot\vec A+\frac{1}{c}\frac{\partial\psi}{\partial t}=0$.\par
+
+[\textbf{矢势的微分方程}] $\vec\nabla^2\vec A=-\mu\vec J$.\par
+\qquad 由$\vec B=\mu\vec H$和$\vec B=\vec\nabla\times\vec A$, 得$\vec\nabla\times(\vec\nabla\times\vec A)=\mu\vec\nabla\times\vec H=\mu\vec J$\par
+\qquad 由库伦规范$\vec\nabla\cdot\vec J=0$, 得$\vec\nabla^2\vec A=-\mu_0\vec J$\par
+\qquad $\vec A$的每个分量都有$\vec\nabla^2 A_i=-\mu J_i, (i=1,2,3)$, 有特解$\vec A(\vec x)=\frac{\mu}{4\pi}\int_V\frac{\vec J(\vec x')}{r}dV'$\par
+\qquad \quad 即$\vec B=\frac{\mu}{4\pi}\int_V\frac{\vec J(\vec x')\times\vec r}{r^3}dV'$\par
+
+[\textbf{矢势的边值关系}]\par
+\qquad $\begin{cases}\vec e_n\cdot(\vec\nabla\times\vec A_2-\vec\nabla\times\vec A_1)=0\\ \vec e_n\times(\vec\nabla\times\frac{\vec A_2}{\mu_2}-\vec\nabla\times\frac{\vec A_1}{\mu_1})=\vec\alpha \end{cases} \Leftrightarrow \begin{cases}A_{2t}=A_{1t}\\A_{2n}=A_{1n}\end{cases}\Leftrightarrow \vec A_2=\vec A_1$\par
+
+[\textbf{引入磁标势的条件}] 区域内的任何回路都不被自由电流所链环, 即该区域是没有自由电流分布的单连通区域.\par
+
+[\textbf{磁标势}] $\vec H=-\vec\nabla\varphi_m$.\par
+
+[\textbf{磁标势法与静电场公式对比}]\par
+\begin{table}[htb]\begin{center}\begin{tabular}{c c}
+       \hline $\vec\nabla\times\vec E=\vec 0$&$\vec\nabla\times\vec H=\vec 0$\\
+       \hline $\vec\nabla\cdot \vec E=\frac{\rho_f+\rho_p}{\varepsilon_0}$ & $\vec\nabla\cdot\vec H=\frac{\rho_m}{\mu_0} $ \\
+       \hline $\rho_p=-\vec\nabla\cdot\vec P$ & $\rho_m=-\mu_0\vec\nabla\cdot\vec M$ \\
+       \hline $\vec D=\varepsilon_0\vec E+\vec P$ & $\vec B=\mu_0\vec H+\mu_0\vec M$ \\
+       \hline $\vec E=-\vec\nabla\varphi$ & $\vec H=-\vec\nabla\varphi_m$ \\
+       \hline $\vec\nabla^2\varphi =-\frac{\rho_f+\rho_p}{\varepsilon_0}$ & $\vec\nabla^2\varphi_m=-\frac{\rho_m}{\mu_0}$ \\
+       \hline
+       \end{tabular}\end{center}\end{table}\par
+
+[\textbf{磁多极矩}]\par
+\qquad $\vec A^{(0)}=\vec 0$, 不含磁单极项; $\vec A^{(1)}=\frac{\mu_0}{4\pi}\frac{\vec m\times\vec R}{R^3}$.\par
+
+[\textbf{磁矩}] $\vec m=I\Delta\vec S=\frac{I}{2}\oint_L\vec x'\times d\vec l'=\frac{1}{2}\int_V\vec x'\times\vec J(\vec x')dV'$.
+
+\clearpage
+
+[\textbf{磁偶极矩的矢势推导}]\par
+\qquad $\vec A^{(1)}=-\frac{\mu_0}{4\pi}\int_V\vec J(\vec x')\vec x'\cdot\vec\nabla\frac{1}{R}dV'=\frac{\mu_0}{4\pi}\int_V\vec J(\vec x')\vec x'\cdot\frac{\vec R}{R^3}dV'$\par
+\qquad 因为$R$与积分无关,恒定电流具有连续性,且积分路径有$d\vec x'=d\vec l'$\par
+\qquad \quad 所以$\vec A^{(1)}=\frac{\mu_0I}{4\pi R^3}\oint_L\vec x'\cdot\vec R d\vec l'$\par
+\qquad 因为全微分的闭合曲线积分与路径无关, $\oint_Ld[(\vec x'\cdot\vec R)\vec x']=\oint_L(\vec x'\cdot\vec R)d\vec l'+\oint_L(d\vec l'\cdot\vec R)\vec x'=\vec 0$\par
+\qquad \quad 所以$\oint_L\vec x'\cdot\vec Rd\vec l'=-\oint_Ld\vec l'\cdot\vec R\vec x'$\par
+\qquad \quad 即$\oint_L\vec x'\cdot\vec Rd\vec l'=\frac{1}{2}\oint_L\left(\vec x'\cdot\vec Rd\vec l'-d\vec l'\cdot\vec R\vec x'\right)=\frac{1}{2}\oint_L\vec R\times(d\vec l'\times\vec x')$\par
+\qquad 得到$\vec A^{(1)}=\frac{\mu_0}{4\pi R^3}\frac{I}{2}\oint_L(\vec x'\times d\vec l')\times\vec R$\par
+\qquad 因为$\frac{1}{2}\oint_L(\vec x'\times d\vec l')=\vec S$\par
+\qquad \quad 所以$\frac{I}{2}\oint_L(\vec x'\times d\vec l')=\vec m$\par
+\qquad \quad 即$\vec A^{(1)}=\frac{\mu_0}{4\pi}\frac{\vec m\times\vec R}{R^3}$\par
+
+[\textbf{磁偶极矩的磁场推导}]\par
+\qquad $\vec B^{(1)}=\vec\nabla\times\vec A^{(1)}=\frac{\mu_0}{4\pi}\vec\nabla\times(\vec m\times\frac{\vec R}{R^3})=-\frac{\mu_0}{4\pi}(\vec m\cdot\vec\nabla)\frac{\vec R}{R^3}$\par
+\qquad 由$\vec m\times(\vec\nabla\times\frac{\vec R}{R^3})=\vec\nabla(\vec m\cdot\frac{\vec R}{R^3})-(\vec m\cdot\vec\nabla)\frac{\vec R}{R^3}=\vec 0$\par
+\qquad \quad 得$\vec B^{(1)}=-\frac{\mu_0}{4\pi}\vec\nabla(\vec m\cdot\frac{\vec R}{R^3})=-\mu_0\vec\nabla\frac{\vec m\cdot\vec R}{4\pi R^3}$\par
+\qquad 由$\vec H=-\vec\nabla\varphi_m$, $\vec B=\mu_0\vec H$\par
+\qquad \quad 得$\vec B^{(1)}=-\mu_0\vec\nabla\varphi_m$, $\varphi_m=\frac{\vec m\cdot\vec R}{4\pi R^3}$\par
+
+\begin{center}
+ \textbf{2.静磁场的能量}
+\end{center}
+
+[\textbf{静磁场的能量}] $W=\frac{1}{2}\int_V\vec B\cdot\vec HdV$, $W=\frac{1}{2}\int_V\vec A\cdot\vec JdV$.\par
+
+[\textbf{电流在外场中的能量}] $W=\frac{1}{2}\int_V\vec J\cdot\vec A_edV$.\par
+
+[\textbf{小区域电流在外场中的能量}] $W=\frac{1}{2}\left(I\oint_L\vec A_e\cdot d\vec l+I_e\oint_L\vec A\cdot d\vec l\right)=\frac{1}{2}\left(I\Phi_e+I_e\Phi\right)$.\par
+\qquad 增量$\delta W=\frac{1}{2}\left(I\delta\Phi_e+I_e\delta\Phi\right)$.\par
+
+[\textbf{磁偶极子的势函数}] $U=-W=-\int\vec J\cdot\vec A_edV=-I\oint_L\vec A_e\cdot d\vec l=-I\int_S\vec B\cdot d\vec S=-\vec m\cdot\vec B$.\par
+
+[\textbf{磁偶极子在外场受力}] $\vec F=-\vec\nabla U=\vec\nabla(\vec m\cdot\vec B_e)=\vec m\times(\vec\nabla\times\vec B_e)+\vec m\cdot\vec\nabla\vec B_e$.\par
+\qquad 当外场电流不在$\vec m$的区域内时, $\vec\nabla\times\vec B_e=\vec 0$, 则$\vec F=\vec m\cdot\vec \nabla\vec B_e$.\par
+
+[\textbf{磁偶极子在外场中所受力矩}] $\vec L=\vec m\times\vec B_e$.\par
+
+\clearpage
+
+\begin{center}
+ \textbf{3.超导体的电磁性质}
+\end{center}
+
+[\textbf{阿哈罗诺夫-玻姆效应(A-B效应)结论}] 磁场的物理效应不能完全用$\vec B$描述.
+
+[\textbf{超导体的基本性质}]\par
+\qquad (1). \textbf{超导电性}: 当材料温度低于临界温度$T_c$时, 材料的电阻突然消失;\par
+\qquad (2). \textbf{临界磁场}: 当材料处在超过临界磁场$\vec H_c$的磁场中时, 材料由超导态转变为正常态;\par
+\qquad \qquad a. 第一类超导体: 只有一个临界磁场, 当外场$\vec H < \vec H_c$时材料为超导态, \\ 当外场$\vec H\ge \vec H_c$时材料为正常态;\par
+\qquad \qquad b. 第二类超导体: 有两个临界磁场, 当外场$\vec H < \vec H_{c1}$时材料为超导态; \\ 当外场$\vec H_{c1}<\vec H<\vec H_{c2}$时磁场以量子化磁通线形式进入材料内, 磁通线穿过的细长区域为正常态, 其余区域为超导态; 当外场$\vec H > \vec H_{c2}$时材料为正常态;\par
+\qquad (3). \textbf{迈斯纳效应(抗磁性)}: 随着进入超导体内部深度的增加, 磁场迅速衰减, 磁场主要存在于超导体表面一定厚度的薄层内.\par
+\qquad \qquad a. 理想迈斯纳态: 对于宏观超导体, 可以将磁场进入超导体的深度看为趋于$0$, 则近似认为超导体内部磁感应强度$\vec B=\vec 0$, 超导体具有完全抗磁性, 称为理想迈斯纳态;\par
+\qquad \qquad b. 一般迈斯纳态: 不能理想化的超导体状态则为一般迈斯纳态;\par
+\qquad (4). \textbf{临界电流}: 当材料内部电流达到临界电流$I_c$时, 电流产生的磁场超过临界磁场, 超导体转变为正常态;\par
+\qquad (5). \textbf{磁通量子化}: 对于第一类复连通超导体, 以及单连通或复连通的第二类超导体, 磁通量只能是基本值$\Phi_0=\frac{h}{2e}=2.07\times 10^{-15}Wb$的整数倍. $\Phi_0$为磁通量子, $h$为普朗克常量, $e$为电子电荷量.\par
+
+[\textbf{伦敦唯象理论}]\par
+\qquad \textbf{伦敦第一方程} $\frac{\partial\vec J_s}{\partial t}=\alpha \vec E$, $\alpha=\frac{n_se^2}{m}$;\par
+\qquad \textbf{伦敦第二方程} $\vec\nabla\times\vec J_s=-\alpha\vec B$;\par
+\qquad \textbf{超导体内超导电流与矢势关系} $\vec J_s(\vec x)=-\alpha\vec A(\vec x)$.\par
+
+[\textbf{皮帕德非局域修正的原因}] 由于超导电流以库珀对为单元凝聚为量子态, 不同点上的超导电子相互关联, 使超导电流与电磁场的相互作用不再是局域的.
+
+\end{document}
